@@ -6,6 +6,7 @@ import { getToken, getSessionMeta, isSessionExpired, triggerUnauthorized } from 
 const logger = createEnvLogger("API");
 
 logEnvConfig();
+console.info("[API] base URL", env.apiBaseUrl || "(not configured)");
 
 const AUTH_SKIP_PATHS = ["/login", "/signup"];
 

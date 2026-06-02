@@ -1,5 +1,5 @@
 import api from "./api";
-import { createEnvLogger } from "../config/env";
+import env, { createEnvLogger } from "../config/env";
 import {
   clearAuth,
   getStoredUser,
@@ -10,6 +10,30 @@ import {
 } from "../utils/authStorage";
 
 const logger = createEnvLogger("Auth");
+
+/** Production Render API (signup uses this when env is unset or localhost). */
+const PRODUCTION_API_URL = "https://v2b-neural-grid-1.onrender.com";
+
+function resolveSignupBaseUrl() {
+  const configured = (env.apiBaseUrl || "").replace(/\/+$/, "");
+  if (env.isDev) {
+    return configured || "http://127.0.0.1:8001";
+  }
+  if (configured && !/^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/i.test(configured)) {
+    return configured;
+  }
+  return PRODUCTION_API_URL;
+}
+
+function buildSignupBody(payload) {
+  return {
+    email: String(payload?.email ?? "")
+      .trim()
+      .toLowerCase(),
+    password: String(payload?.password ?? ""),
+    username: String(payload?.username ?? "").trim(),
+  };
+}
 
 /**
  * Authenticate and return token payload.
@@ -23,10 +47,17 @@ export async function login(credentials) {
 
 /**
  * Register a new user account (returns JWT on success).
- * @param {{ email: string, password: string, username?: string }} payload
+ * POST { email, password, username } to production or configured API base.
+ * @param {{ email: string, password: string, username: string }} payload
  */
 export async function signup(payload) {
-  const response = await api.post("/signup", payload);
+  const body = buildSignupBody(payload);
+  const baseURL = resolveSignupBaseUrl();
+  console.info("[Auth] signup request", { ...body, password: "[redacted]" });
+  console.info("[Auth] signup API URL", `${baseURL}/signup`);
+
+  const response = await api.post("/signup", body, { baseURL });
+  console.info("[Auth] signup response", response?.data);
   logger.debug("signup success");
   return response.data;
 }
@@ -88,25 +119,35 @@ export async function loginAndPersist(credentials) {
 }
 
 /**
- * Signup, persist session, and fetch profile.
+ * Signup, persist session, and fetch profile (same session path as login).
  */
 export async function signupAndPersist(payload) {
-  const tokenPayload = await signup(payload);
-  const responseUser = tokenPayload?.user ?? null;
+  const body = buildSignupBody(payload);
+  const tokenPayload = await signup(body);
+
+  if (!tokenPayload?.access_token) {
+    throw new Error("Signup did not return an access token");
+  }
+
+  const responseUser = tokenPayload.user ?? null;
   persistAuthSession(tokenPayload, responseUser);
 
   let user = responseUser;
-  try {
-    if (!user) user = await getCurrentUserSafe();
-  } catch {
-    if (!user) {
-      user = {
-        email: payload.email,
-        username: payload.username || payload.email.split("@")[0],
-      };
+  if (!user) {
+    try {
+      user = await getCurrentUserSafe();
+    } catch {
+      /* use fallback below */
     }
   }
-  if (user) setStoredUser(user);
+  if (!user) {
+    user = {
+      email: body.email,
+      username: body.username || body.email.split("@")[0],
+      is_active: true,
+    };
+  }
+  setStoredUser(user);
   return { tokenPayload, user };
 }
 

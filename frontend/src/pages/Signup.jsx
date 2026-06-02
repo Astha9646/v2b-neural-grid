@@ -103,20 +103,35 @@ export default function Signup() {
     setLoading(true);
     try {
       await signup({
-        username: username.trim(),
         email: email.trim(),
         password,
+        username: username.trim(),
       });
       navigate("/dashboard", { replace: true });
     } catch (err) {
+      const status = err?.response?.status;
       const detail = err.response?.data?.detail;
-      setError(
-        typeof detail === "string"
-          ? detail
-          : Array.isArray(detail)
+      if (status === 409) {
+        setError("Email already registered");
+      } else if (status === 422) {
+        setError(
+          Array.isArray(detail)
             ? detail.map((d) => d.msg).join(", ")
-            : "Signup failed — please try again",
-      );
+            : typeof detail === "string"
+              ? detail
+              : "Validation error. Please check username, email, and password.",
+        );
+      } else if (status >= 500) {
+        setError("Backend unavailable. Please try again in a moment.");
+      } else {
+        setError(
+          typeof detail === "string"
+            ? detail
+            : Array.isArray(detail)
+              ? detail.map((d) => d.msg).join(", ")
+              : "Signup failed — please try again",
+        );
+      }
     } finally {
       setLoading(false);
     }

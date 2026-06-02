@@ -2,15 +2,16 @@
  * V2B Neural Grid — centralized frontend environment configuration.
  *
  * Primary variables:
- *   VITE_API_BASE_URL  — REST API base (required in production / Vercel)
- *   VITE_WS_BASE_URL   — WebSocket base (required on Vercel — no same-origin WS proxy)
+ *   VITE_API_URL       — REST API base (required in production / Vercel)
+ *   VITE_WS_URL        — WebSocket base (required on Vercel — no same-origin WS proxy)
  *   VITE_ENVIRONMENT   — development | staging | production
  *
  * Legacy aliases (still supported):
- *   VITE_API_URL → VITE_API_BASE_URL
+ *   VITE_API_BASE_URL → VITE_API_URL
+ *   VITE_WS_BASE_URL  → VITE_WS_URL
  *   VITE_APP_ENV → VITE_ENVIRONMENT
  *
- * Vercel: set VITE_API_BASE_URL and VITE_WS_BASE_URL to your Railway/backend URLs
+ * Vercel: set VITE_API_URL and VITE_WS_URL to your backend URLs
  * in the Vercel project Environment Variables dashboard.
  */
 
@@ -23,6 +24,9 @@ const LOG_LEVELS = Object.freeze({
   error: 3,
   silent: 99,
 });
+
+const DEFAULT_PROD_API_URL = "https://v2b-neural-grid-1.onrender.com";
+const DEFAULT_PROD_WS_URL = "wss://v2b-neural-grid-1.onrender.com";
 
 function trimSlash(value) {
   if (!value) return "";
@@ -114,7 +118,7 @@ function devWsBaseUrl() {
 }
 
 function resolveApiBaseUrl() {
-  const explicit = readEnv("VITE_API_BASE_URL") || readEnv("VITE_API_URL");
+  const explicit = readEnv("VITE_API_URL") || readEnv("VITE_API_BASE_URL");
   if (explicit) return trimSlash(explicit);
 
   const host = readEnv("VITE_API_HOST");
@@ -133,10 +137,10 @@ function resolveApiBaseUrl() {
 
   // Docker/nginx same-origin proxy (not Vercel)
   if (isProduction && !isVercelDeployment() && typeof window !== "undefined") {
-    return "/api";
+    return DEFAULT_PROD_API_URL;
   }
 
-  return "";
+  return isProduction ? DEFAULT_PROD_API_URL : "";
 }
 
 function httpToWs(httpUrl) {
@@ -144,7 +148,7 @@ function httpToWs(httpUrl) {
 }
 
 function resolveWsBaseUrl(apiBaseUrl) {
-  const explicit = readEnv("VITE_WS_BASE_URL");
+  const explicit = readEnv("VITE_WS_URL") || readEnv("VITE_WS_BASE_URL");
   if (explicit) return trimSlash(explicit);
 
   if (apiBaseUrl.startsWith("http://") || apiBaseUrl.startsWith("https://")) {
@@ -164,10 +168,10 @@ function resolveWsBaseUrl(apiBaseUrl) {
     window.location?.host
   ) {
     const proto = window.location.protocol === "https:" ? "wss:" : "ws:";
-    return `${proto}//${window.location.host}`;
+    return DEFAULT_PROD_WS_URL || `${proto}//${window.location.host}`;
   }
 
-  return "";
+  return isProduction ? DEFAULT_PROD_WS_URL : "";
 }
 
 const apiBaseUrl = resolveApiBaseUrl();
@@ -200,31 +204,31 @@ export function validateEnvConfig() {
   const issues = [];
 
   if (!apiBaseUrl) {
-    issues.push("VITE_API_BASE_URL is required in production (e.g. https://your-api.up.railway.app)");
+    issues.push("VITE_API_URL is required in production (e.g. https://your-api-host)");
   }
 
   if (!wsBaseUrl) {
-    issues.push("VITE_WS_BASE_URL is required for telemetry/forecast/AI streams in production");
+    issues.push("VITE_WS_URL is required for telemetry/forecast/AI streams in production");
   }
 
   const localhostPattern = /^https?:\/\/(localhost|127\.0\.0\.1)/i;
   const localWsPattern = /^ws:\/\/(localhost|127\.0\.0\.1)/i;
 
   if (isProduction && localhostPattern.test(apiBaseUrl)) {
-    issues.push("Production API must not use localhost — set VITE_API_BASE_URL to your hosted backend");
+    issues.push("Production API must not use localhost — set VITE_API_URL to your hosted backend");
   }
 
   if (isProduction && localWsPattern.test(wsBaseUrl)) {
-    issues.push("Production WebSocket must not use ws://localhost — set VITE_WS_BASE_URL=wss://...");
+    issues.push("Production WebSocket must not use ws://localhost — set VITE_WS_URL=wss://...");
   }
 
-  if (isProduction && wsBaseUrl.startsWith("ws://") && !readEnv("VITE_WS_BASE_URL")) {
+  if (isProduction && wsBaseUrl.startsWith("ws://") && !readEnv("VITE_WS_URL")) {
     issues.push("Use wss:// for production WebSocket connections");
   }
 
-  if (isVercelDeployment() && !readEnv("VITE_WS_BASE_URL") && !wsBaseUrl.startsWith("wss://")) {
+  if (isVercelDeployment() && !readEnv("VITE_WS_URL") && !wsBaseUrl.startsWith("wss://")) {
     issues.push(
-      "Vercel static hosting cannot proxy WebSockets — set VITE_WS_BASE_URL=wss://your-backend",
+      "Vercel static hosting cannot proxy WebSockets — set VITE_WS_URL=wss://your-backend",
     );
   }
 
@@ -274,7 +278,7 @@ export function getSafeWsUrl(path) {
     return null;
   }
   if (isProduction && url.startsWith("ws://")) {
-    envLogger.warn("Insecure ws:// in production — set VITE_WS_BASE_URL=wss://...");
+    envLogger.warn("Insecure ws:// in production — set VITE_WS_URL=wss://...");
     if (isVercelDeployment()) return null;
   }
   return url;

@@ -24,7 +24,6 @@ from pathlib import Path
 from typing import Any
 
 from fastapi import Depends, FastAPI, HTTPException, Request, WebSocket, status
-from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 # Ensure project root is on path when running as ``uvicorn backend.main:app``
@@ -34,6 +33,7 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from backend.auth import auth_router, ensure_default_admin_user, require_authenticated_user
 from backend.config import Settings, configure_logging, get_settings, settings
+from backend.cors_setup import configure_cors
 from backend.database import init_db
 from backend.digital_twin import TwinScenario, digital_twin
 from backend.forecasting import forecasting_engine
@@ -104,29 +104,46 @@ app = FastAPI(
     },
 )
 
-# CORS for frontend dashboards (environment-driven)
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=settings.cors_origins_list,
-    allow_credentials=settings.cors_origins_list != ["*"],
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# CORS — Vercel + localhost + FRONTEND_URL (credentials require explicit origins)
+configure_cors(app, settings)
 
 app.include_router(auth_router)
 app.include_router(system_router)
 app.include_router(report_router)
 
 
+_AUTH_PATHS = frozenset({"/signup", "/login"})
+
+
 @app.middleware("http")
 async def observability_middleware(request: Request, call_next):
-    """Record API latency for observability (skip WebSocket upgrade paths)."""
+    """Record API latency; log auth/CORS preflight for production debugging."""
     if request.url.path.startswith("/ws"):
         return await call_next(request)
+
+    origin = request.headers.get("origin")
+    if request.url.path in _AUTH_PATHS:
+        logger.info(
+            "incoming auth request method=%s path=%s origin=%s",
+            request.method,
+            request.url.path,
+            origin,
+        )
+
     t0 = time.perf_counter()
     response = await call_next(request)
     elapsed_ms = (time.perf_counter() - t0) * 1000.0
     system_monitor.record_request(elapsed_ms)
+
+    if request.method == "OPTIONS":
+        logger.info(
+            "CORS preflight path=%s origin=%s status=%s allow-origin=%s",
+            request.url.path,
+            origin,
+            response.status_code,
+            response.headers.get("access-control-allow-origin"),
+        )
+
     return response
 
 

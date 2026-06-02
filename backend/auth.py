@@ -476,7 +476,9 @@ def login(
     db: Annotated[Session, Depends(get_db)],
 ) -> TokenResponse:
     """Verify credentials and return a bearer access token."""
+    logger.info("login request received email=%s", str(payload.email).lower())
     user = authenticate_user(db, payload)
+    logger.info("login success user_id=%s", user.id)
     return issue_token_response(user)
 
 

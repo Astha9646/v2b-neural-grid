@@ -82,6 +82,11 @@ class Settings(BaseSettings):
     api_title: str = Field(default="V2B Smart Charging API")
     api_version: str = Field(default="1.0.0")
     cors_origins: str = Field(default="")
+    cors_origin_regex: str = Field(
+        default="",
+        validation_alias="CORS_ORIGIN_REGEX",
+        description="Optional extra origin regex (Vercel patterns added automatically in production).",
+    )
     debug: bool = Field(default=False)
 
     # --- WebSocket route paths (suffix under WS mount) ---
@@ -139,7 +144,7 @@ class Settings(BaseSettings):
             return False
         return str(value).strip().lower() in ("1", "true", "yes", "on")
 
-    @field_validator("ws_base_url", "frontend_url", "cors_origins", mode="before")
+    @field_validator("ws_base_url", "frontend_url", "cors_origins", "cors_origin_regex", mode="before")
     @classmethod
     def _strip_url(cls, value: object) -> object:
         if isinstance(value, str):
@@ -225,23 +230,54 @@ class Settings(BaseSettings):
 
     @property
     def cors_origins_list(self) -> list[str]:
-        raw = (self.cors_origins or "").strip()
-        localhost_origins = ("http://localhost:5173", "http://127.0.0.1:5173")
-        if raw and raw != "*":
-            configured = [origin.strip().rstrip("/") for origin in raw.split(",") if origin.strip()]
-            for origin in localhost_origins:
-                if origin not in configured:
-                    configured.append(origin)
-            return configured
+        """
+        Explicit allowed origins (required when ``allow_credentials=True``).
 
+        Never returns ``["*"]`` — use :pyattr:`cors_origin_regex` for Vercel preview URLs.
+        """
+        localhost_origins = (
+            "http://localhost:5173",
+            "http://127.0.0.1:5173",
+            "http://localhost:3000",
+        )
         origins: list[str] = []
+
+        raw = (self.cors_origins or "").strip()
+        if raw and raw != "*":
+            for origin in raw.split(","):
+                cleaned = origin.strip().rstrip("/")
+                if cleaned and cleaned not in origins:
+                    origins.append(cleaned)
+
         if self.frontend_url:
-            origins.append(self.frontend_url.rstrip("/"))
-        for url in (*localhost_origins, "http://localhost:3000"):
+            frontend = self.frontend_url.rstrip("/")
+            if frontend and frontend not in origins:
+                origins.append(frontend)
+
+        for url in localhost_origins:
             cleaned = url.rstrip("/")
             if cleaned not in origins:
                 origins.append(cleaned)
-        return origins if origins else ["*"]
+
+        return origins
+
+    @property
+    def cors_origin_regex_pattern(self) -> str | None:
+        """
+        Regex matching Vercel production/preview deployments over HTTPS.
+
+        Combined with optional ``CORS_ORIGIN_REGEX`` env override.
+        """
+        patterns: list[str] = [
+            r"https://[\w-]+\.vercel\.app",
+            r"https://[\w-]+\.vercel\.sh",
+        ]
+        custom = (self.cors_origin_regex or "").strip()
+        if custom:
+            patterns.append(custom)
+        if not patterns:
+            return None
+        return "|".join(patterns)
 
     @property
     def telemetry_file(self) -> Path:

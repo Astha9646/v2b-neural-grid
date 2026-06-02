@@ -14,7 +14,9 @@ Endpoints (mounted in ``main.py``):
 
 from __future__ import annotations
 
+import asyncio
 import logging
+import time
 from datetime import datetime, timedelta, timezone
 from typing import Annotated, Any
 
@@ -24,7 +26,7 @@ from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError, jwt
 from jose.exceptions import ExpiredSignatureError
 from passlib.context import CryptContext
-from sqlalchemy.exc import IntegrityError
+from sqlalchemy.exc import IntegrityError, OperationalError
 from sqlalchemy.orm import Session
 
 from backend.config import settings
@@ -40,7 +42,11 @@ logger = logging.getLogger(__name__)
 
 # passlib 1.7 + bcrypt>=4.1: use bcrypt library directly; hashes remain $2b$-compatible.
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-BCRYPT_ROUNDS = 12
+
+
+def _bcrypt_rounds() -> int:
+    """Production-friendly default (10); override via BCRYPT_ROUNDS env."""
+    return int(settings.bcrypt_rounds)
 
 oauth2_scheme = OAuth2PasswordBearer(
     tokenUrl="/login",
@@ -56,7 +62,7 @@ def hash_password(password: str) -> str:
     """
     if not password:
         raise ValueError("Password must not be empty")
-    salt = bcrypt.gensalt(rounds=BCRYPT_ROUNDS)
+    salt = bcrypt.gensalt(rounds=_bcrypt_rounds())
     return bcrypt.hashpw(password.encode("utf-8"), salt).decode("utf-8")
 
 
@@ -216,33 +222,52 @@ def get_user_by_username(db: Session, username: str) -> User | None:
     return db.query(User).filter(User.username == username).first()
 
 
-def create_user(db: Session, payload: UserCreate) -> User:
-    """Persist a new user with hashed password."""
-    email = str(payload.email).lower()
+def _raise_conflict_from_integrity(db: Session, exc: IntegrityError, *, email: str, username: str) -> None:
+    """Map SQLite/Postgres integrity errors to HTTP 409."""
+    db.rollback()
+    if get_user_by_email(db, email):
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail="Email already registered",
+        ) from exc
+    if get_user_by_username(db, username):
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail="Username already taken",
+        ) from exc
+    raise HTTPException(
+        status_code=status.HTTP_409_CONFLICT,
+        detail="User already exists",
+    ) from exc
+
+
+def register_new_user(
+    db: Session,
+    *,
+    username: str,
+    email: str,
+    hashed_password: str,
+) -> User:
+    """
+    Insert user with pre-hashed password — single commit, rollback on failure.
+    """
     user = User(
-        username=payload.username,
-        email=email,
-        hashed_password=hash_password(payload.password.get_secret_value()),
+        username=username,
+        email=email.lower(),
+        hashed_password=hashed_password,
         is_active=True,
     )
     db.add(user)
     try:
         db.commit()
     except IntegrityError as exc:
+        _raise_conflict_from_integrity(db, exc, email=email, username=username)
+    except OperationalError as exc:
         db.rollback()
-        if get_user_by_email(db, email):
-            raise HTTPException(
-                status_code=status.HTTP_409_CONFLICT,
-                detail="Email already registered",
-            ) from exc
-        if get_user_by_username(db, payload.username):
-            raise HTTPException(
-                status_code=status.HTTP_409_CONFLICT,
-                detail="Username already taken",
-            ) from exc
+        logger.error("signup DB operational error: %s", exc)
         raise HTTPException(
-            status_code=status.HTTP_409_CONFLICT,
-            detail="User already exists",
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="Database temporarily busy. Please retry in a few seconds.",
         ) from exc
     db.refresh(user)
     return user
@@ -375,25 +400,70 @@ auth_router = APIRouter(tags=["authentication"])
     status_code=status.HTTP_201_CREATED,
     summary="Register a new user",
 )
-def signup(
+async def signup(
     payload: UserCreate,
     db: Annotated[Session, Depends(get_db)],
 ) -> TokenResponse:
-    """Create a new user with a bcrypt-hashed password and return a JWT."""
-    if get_user_by_email(db, str(payload.email)):
+    """
+    Create a new user with a bcrypt-hashed password and return a JWT.
+
+    CPU-heavy hashing runs in a thread pool so the event loop stays responsive
+    on Render free tier (SQLite + single worker).
+    """
+    started = time.perf_counter()
+    email = str(payload.email).lower()
+    username = payload.username
+    logger.info("signup request received email=%s username=%s", email, username)
+
+    if get_user_by_email(db, email):
         raise HTTPException(
             status_code=status.HTTP_409_CONFLICT,
             detail="Email already registered",
         )
-    if get_user_by_username(db, payload.username):
+    if get_user_by_username(db, username):
         raise HTTPException(
             status_code=status.HTTP_409_CONFLICT,
             detail="Username already taken",
         )
 
-    user = create_user(db, payload)
-    logger.info("User registered: id=%s email=%s", user.id, user.email)
-    return issue_token_response(user)
+    logger.info("user creation started email=%s", email)
+    try:
+        plain_password = payload.password.get_secret_value()
+        hashed_password = await asyncio.to_thread(hash_password, plain_password)
+    except Exception as exc:
+        logger.exception("signup password hashing failed")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Unable to complete signup. Please try again.",
+        ) from exc
+
+    try:
+        user = register_new_user(
+            db,
+            username=username,
+            email=email,
+            hashed_password=hashed_password,
+        )
+    except HTTPException:
+        raise
+    except Exception as exc:
+        db.rollback()
+        logger.exception("signup failed unexpectedly")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Registration failed. Please try again.",
+        ) from exc
+
+    elapsed_ms = (time.perf_counter() - started) * 1000.0
+    logger.info(
+        "DB commit complete user_id=%s email=%s elapsed_ms=%.0f",
+        user.id,
+        user.email,
+        elapsed_ms,
+    )
+    response = issue_token_response(user)
+    logger.info("signup success response user_id=%s", user.id)
+    return response
 
 
 @auth_router.post(

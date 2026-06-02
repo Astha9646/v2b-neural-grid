@@ -113,6 +113,7 @@ class Settings(BaseSettings):
     jwt_algorithm: str = Field(default="HS256")
     jwt_access_token_expire_minutes: int = Field(default=60)
     database_url: str = Field(default=f"sqlite:///{DEFAULT_DATABASE_PATH.as_posix()}")
+    bcrypt_rounds: int = Field(default=10, ge=4, le=14)
     require_auth: bool = Field(default=True)
 
     @field_validator(

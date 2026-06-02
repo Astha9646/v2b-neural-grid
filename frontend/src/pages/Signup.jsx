@@ -1,9 +1,10 @@
-import { useCallback, useMemo, useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { useAuth } from "../context/AuthContext";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const USERNAME_RE = /^[a-zA-Z0-9_-]+$/;
 
 function validateEmail(value) {
   if (!value.trim()) return "Email is required";
@@ -12,15 +13,62 @@ function validateEmail(value) {
 }
 
 function validateUsername(value) {
-  if (!value.trim()) return "Username is required";
-  if (value.trim().length < 3) return "Username must be at least 3 characters";
+  const trimmed = value.trim();
+  if (!trimmed) return "Username is required";
+  if (trimmed.length < 3) return "Username must be at least 3 characters";
+  if (!USERNAME_RE.test(trimmed)) {
+    return "Username may only contain letters, numbers, underscores, and hyphens";
+  }
   return "";
 }
 
 function validatePassword(value) {
   if (!value) return "Password is required";
   if (value.length < 8) return "Password must be at least 8 characters";
+  if (!/[a-zA-Z]/.test(value) || !/\d/.test(value)) {
+    return "Password must include at least one letter and one number";
+  }
   return "";
+}
+
+function collectValidationErrors(username, email, password, confirmPassword) {
+  const messages = [
+    validateUsername(username),
+    validateEmail(email),
+    validatePassword(password),
+    password !== confirmPassword ? "Passwords do not match" : "",
+  ].filter(Boolean);
+  return messages;
+}
+
+function formatApiError(err) {
+  const status = err?.response?.status;
+  const detail = err?.response?.data?.detail;
+
+  if (status === 409) {
+    return typeof detail === "string" && detail.toLowerCase().includes("username")
+      ? detail
+      : "Email already registered";
+  }
+  if (status === 422) {
+    if (Array.isArray(detail)) {
+      return detail.map((d) => d.msg || d.message || String(d)).join(", ");
+    }
+    if (typeof detail === "string") return detail;
+    return "Validation error. Check username, email, and password.";
+  }
+  if (status >= 500) return "Backend unavailable. Please try again in a moment.";
+  if (err?.code === "ERR_CANCELED" || err?.message === "Session expired") {
+    return "Session expired. Please refresh and try again.";
+  }
+  if (!err?.response) {
+    return err?.message || "Network error — could not reach the server.";
+  }
+  if (typeof detail === "string") return detail;
+  if (Array.isArray(detail)) {
+    return detail.map((d) => d.msg).join(", ");
+  }
+  return "Signup failed — please try again";
 }
 
 function BoltIcon({ className = "" }) {
@@ -64,74 +112,60 @@ export default function Signup() {
     confirmPassword: false,
   });
 
-  const fieldErrors = useMemo(
-    () => ({
-      username: touched.username ? validateUsername(username) : "",
-      email: touched.email ? validateEmail(email) : "",
-      password: touched.password ? validatePassword(password) : "",
-      confirmPassword:
-        touched.confirmPassword && password !== confirmPassword
-          ? "Passwords do not match"
-          : "",
-    }),
-    [username, email, password, confirmPassword, touched],
-  );
+  const showFieldErrors = touched.username || touched.email || touched.password || touched.confirmPassword;
 
-  const runValidation = useCallback(() => {
+  const fieldErrors = {
+    username: showFieldErrors ? validateUsername(username) : "",
+    email: showFieldErrors ? validateEmail(email) : "",
+    password: showFieldErrors ? validatePassword(password) : "",
+    confirmPassword:
+      showFieldErrors && confirmPassword && password !== confirmPassword
+        ? "Passwords do not match"
+        : "",
+  };
+
+  const handleSignup = async (e) => {
+    e.preventDefault();
+    console.info("signup clicked");
+
+    setError("");
     setTouched({
       username: true,
       email: true,
       password: true,
       confirmPassword: true,
     });
-    return (
-      !validateUsername(username) &&
-      !validateEmail(email) &&
-      !validatePassword(password) &&
-      password === confirmPassword
-    );
-  }, [username, email, password, confirmPassword]);
 
-  const handleSignup = async (e) => {
-    e.preventDefault();
-    setError("");
-    if (!runValidation()) {
-      if (password !== confirmPassword) setError("Passwords do not match");
+    const validationErrors = collectValidationErrors(
+      username,
+      email,
+      password,
+      confirmPassword,
+    );
+
+    if (validationErrors.length > 0) {
+      const validationMessage = validationErrors.join(" ");
+      console.warn("signup blocked by client validation", validationErrors);
+      setError(validationMessage);
       return;
     }
 
+    const payload = {
+      username: username.trim(),
+      email: email.trim().toLowerCase(),
+      password,
+    };
+
+    console.info("signup payload", { ...payload, password: "[redacted]" });
+
     setLoading(true);
     try {
-      await signup({
-        email: email.trim(),
-        password,
-        username: username.trim(),
-      });
+      const profile = await signup(payload);
+      console.info("signup API response / profile", profile);
       navigate("/dashboard", { replace: true });
     } catch (err) {
-      const status = err?.response?.status;
-      const detail = err.response?.data?.detail;
-      if (status === 409) {
-        setError("Email already registered");
-      } else if (status === 422) {
-        setError(
-          Array.isArray(detail)
-            ? detail.map((d) => d.msg).join(", ")
-            : typeof detail === "string"
-              ? detail
-              : "Validation error. Please check username, email, and password.",
-        );
-      } else if (status >= 500) {
-        setError("Backend unavailable. Please try again in a moment.");
-      } else {
-        setError(
-          typeof detail === "string"
-            ? detail
-            : Array.isArray(detail)
-              ? detail.map((d) => d.msg).join(", ")
-              : "Signup failed — please try again",
-        );
-      }
+      console.error("signup API error", err?.response?.data ?? err?.message ?? err);
+      setError(formatApiError(err));
     } finally {
       setLoading(false);
     }
@@ -166,6 +200,7 @@ export default function Signup() {
               </label>
               <input
                 id="signup-username"
+                name="username"
                 type="text"
                 autoComplete="username"
                 placeholder="grid_operator"
@@ -186,6 +221,7 @@ export default function Signup() {
               </label>
               <input
                 id="signup-email"
+                name="email"
                 type="email"
                 autoComplete="email"
                 placeholder="operator@grid.ai"
@@ -206,6 +242,7 @@ export default function Signup() {
               </label>
               <input
                 id="signup-password"
+                name="password"
                 type="password"
                 autoComplete="new-password"
                 placeholder="••••••••"
@@ -226,6 +263,7 @@ export default function Signup() {
               </label>
               <input
                 id="signup-confirm"
+                name="confirmPassword"
                 type="password"
                 autoComplete="new-password"
                 placeholder="••••••••"

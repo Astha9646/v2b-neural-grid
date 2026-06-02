@@ -27,11 +27,11 @@ function resolveSignupBaseUrl() {
 
 function buildSignupBody(payload) {
   return {
+    username: String(payload?.username ?? "").trim(),
     email: String(payload?.email ?? "")
       .trim()
       .toLowerCase(),
     password: String(payload?.password ?? ""),
-    username: String(payload?.username ?? "").trim(),
   };
 }
 

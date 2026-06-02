@@ -28,7 +28,7 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from backend.config import settings
-from backend.database import get_db
+from backend.database import get_db, session_scope
 from backend.models import User
 from backend.schemas import TokenResponse, UserCreate, UserLogin, UserResponse
 
@@ -168,7 +168,35 @@ def issue_token_response(user: User) -> TokenResponse:
         access_token=token,
         token_type="bearer",
         expires_in=token_expires_in_seconds(),
+        user=user_to_response(user),
     )
+
+
+def ensure_default_admin_user() -> None:
+    """
+    Create the production demo admin user when the users table is empty.
+
+    Credentials:
+      email: admin@grid.ai
+      password: admin123
+    """
+    default_email = "admin@grid.ai"
+    default_username = "admin"
+    default_password = "admin123"
+
+    with session_scope() as db:
+        has_users = db.query(User.id).first() is not None
+        if has_users:
+            return
+
+        admin = User(
+            username=default_username,
+            email=default_email,
+            hashed_password=hash_password(default_password),
+            is_active=True,
+        )
+        db.add(admin)
+        logger.info("Default admin user created")
 
 
 # ---------------------------------------------------------------------------

@@ -69,16 +69,19 @@ export function persistAuthSession(tokenPayload, user) {
  */
 export async function loginAndPersist(credentials) {
   const tokenPayload = await login(credentials);
-  persistAuthSession(tokenPayload);
+  const responseUser = tokenPayload?.user ?? null;
+  persistAuthSession(tokenPayload, responseUser);
 
-  let user = null;
+  let user = responseUser;
   try {
-    user = await getCurrentUserSafe();
+    if (!user) user = await getCurrentUserSafe();
   } catch {
-    user = {
-      email: credentials.email.trim(),
-      username: credentials.email.trim().split("@")[0],
-    };
+    if (!user) {
+      user = {
+        email: credentials.email.trim(),
+        username: credentials.email.trim().split("@")[0],
+      };
+    }
   }
   if (user) setStoredUser(user);
   return { tokenPayload, user };
@@ -89,16 +92,19 @@ export async function loginAndPersist(credentials) {
  */
 export async function signupAndPersist(payload) {
   const tokenPayload = await signup(payload);
-  persistAuthSession(tokenPayload);
+  const responseUser = tokenPayload?.user ?? null;
+  persistAuthSession(tokenPayload, responseUser);
 
-  let user = null;
+  let user = responseUser;
   try {
-    user = await getCurrentUserSafe();
+    if (!user) user = await getCurrentUserSafe();
   } catch {
-    user = {
-      email: payload.email,
-      username: payload.username || payload.email.split("@")[0],
-    };
+    if (!user) {
+      user = {
+        email: payload.email,
+        username: payload.username || payload.email.split("@")[0],
+      };
+    }
   }
   if (user) setStoredUser(user);
   return { tokenPayload, user };

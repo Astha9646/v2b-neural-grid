@@ -701,6 +701,13 @@ class TokenResponse(BaseModel):
                 "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
                 "token_type": "bearer",
                 "expires_in": 3600,
+                "user": {
+                    "id": 1,
+                    "username": "grid_operator",
+                    "email": "operator@example.com",
+                    "is_active": True,
+                    "created_at": "2026-05-22T12:00:00+00:00",
+                },
             }
         }
     )
@@ -708,6 +715,7 @@ class TokenResponse(BaseModel):
     access_token: str = Field(description="JWT or opaque API access token.")
     token_type: Literal["bearer"] = "bearer"
     expires_in: int = Field(ge=1, description="Token lifetime in seconds.")
+    user: UserResponse = Field(description="Authenticated user profile.")
 
 
 # ---------------------------------------------------------------------------

@@ -32,7 +32,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from backend.auth import auth_router, require_authenticated_user
+from backend.auth import auth_router, ensure_default_admin_user, require_authenticated_user
 from backend.config import Settings, configure_logging, get_settings, settings
 from backend.database import init_db
 from backend.digital_twin import TwinScenario, digital_twin
@@ -72,6 +72,7 @@ configure_logging(settings)
 async def lifespan(app: FastAPI):
     """Production-safe bootstrap: validate optional resources, never crash on missing deps."""
     await asyncio.to_thread(init_db)
+    await asyncio.to_thread(ensure_default_admin_user)
     logger.info(
         "Database ready (environment=%s require_auth=%s frontend=%s ws=%s)",
         settings.environment,

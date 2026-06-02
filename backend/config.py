@@ -225,17 +225,21 @@ class Settings(BaseSettings):
     @property
     def cors_origins_list(self) -> list[str]:
         raw = (self.cors_origins or "").strip()
+        localhost_origins = ("http://localhost:5173", "http://127.0.0.1:5173")
         if raw and raw != "*":
-            return [origin.strip().rstrip("/") for origin in raw.split(",") if origin.strip()]
+            configured = [origin.strip().rstrip("/") for origin in raw.split(",") if origin.strip()]
+            for origin in localhost_origins:
+                if origin not in configured:
+                    configured.append(origin)
+            return configured
 
         origins: list[str] = []
         if self.frontend_url:
             origins.append(self.frontend_url.rstrip("/"))
-        if self.is_development:
-            for url in ("http://127.0.0.1:5173", "http://localhost:3000"):
-                cleaned = url.rstrip("/")
-                if cleaned not in origins:
-                    origins.append(cleaned)
+        for url in (*localhost_origins, "http://localhost:3000"):
+            cleaned = url.rstrip("/")
+            if cleaned not in origins:
+                origins.append(cleaned)
         return origins if origins else ["*"]
 
     @property

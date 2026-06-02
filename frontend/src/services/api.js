@@ -1,7 +1,7 @@
 import axios from "axios";
 
 import env, { createEnvLogger, logEnvConfig } from "../config/env";
-import { getToken, isSessionExpired, triggerUnauthorized } from "../utils/authStorage";
+import { getToken, getSessionMeta, isSessionExpired, triggerUnauthorized } from "../utils/authStorage";
 
 const logger = createEnvLogger("API");
 
@@ -22,12 +22,15 @@ const api = axios.create({
 });
 
 api.interceptors.request.use((config) => {
-  if (isSessionExpired()) {
+  const url = config?.url ?? "";
+  const token = getToken();
+  const hasTrackedSession = Boolean(token || getSessionMeta());
+
+  if (hasTrackedSession && !isAuthExempt(url) && isSessionExpired()) {
     triggerUnauthorized("token_expired");
     return Promise.reject(new axios.CanceledError("Session expired"));
   }
 
-  const token = getToken();
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }

@@ -23,8 +23,8 @@ Thumbs.db
 .vscode/
 
 # ML checkpoints
-checkpoints/*.pth
-*.pt
+# checkpoints/*.pth
+# *.pt
 
 # Build
 build/

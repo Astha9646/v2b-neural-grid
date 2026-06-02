@@ -1,0 +1,35 @@
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+dist/
+
+# Environment
+.env
+.env.*
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+
+# ML checkpoints
+checkpoints/*.pth
+*.pt
+
+# Build
+build/
+coverage/
+
+# Cache
+.cache/
+

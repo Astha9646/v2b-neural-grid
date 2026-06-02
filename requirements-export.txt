@@ -1,0 +1,2 @@
+# PDF enterprise exports (optional — CSV works without this package)
+fpdf2==2.8.3

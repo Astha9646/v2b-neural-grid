@@ -1,0 +1,17 @@
+# =============================================================================
+# V2B Neural Grid — development / local dependencies
+#
+# Production deploys should use requirements-production.txt instead.
+# =============================================================================
+
+-r requirements-production.txt
+
+# Uvicorn --reload file watcher (dev only; not needed in production)
+watchfiles==1.2.0
+
+# Optional runtime: POST /evaluate (imports evaluate.py + matplotlib)
+matplotlib==3.10.9
+tqdm==4.67.3
+
+# Optional: training scripts (train.py)
+# torch is installed manually — see requirements-production.txt header

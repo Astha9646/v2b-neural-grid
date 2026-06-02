@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply bg-[#050810] text-slate-100;
+  }
+}
+
+@layer components {
+  /* Enterprise ops-center panel shell */
+  .panel-shell {
+    @apply relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-4 backdrop-blur-md sm:p-5;
+    @apply transition-shadow duration-300 hover:shadow-[0_0_24px_rgba(34,211,238,0.06)];
+  }
+
+  .panel-shell-accent {
+    border-color: rgba(6, 182, 212, 0.12);
+  }
+
+  .section-heading {
+    @apply font-display text-lg font-semibold tracking-wide text-slate-100;
+  }
+
+  .section-subheading {
+    @apply mt-0.5 text-sm text-slate-500;
+  }
+
+  .section-eyebrow {
+    @apply font-display text-[10px] font-semibold uppercase tracking-[0.22em] text-cyan-500/70;
+  }
+
+  .scroll-panel {
+    @apply max-h-[min(22rem,50vh)] overflow-y-auto overscroll-contain pr-1;
+    scrollbar-gutter: stable;
+  }
+
+  .card-body {
+    @apply min-w-0 overflow-hidden break-words;
+  }
+
+  .metric-value {
+    @apply truncate font-mono text-xl font-bold tabular-nums sm:text-2xl;
+  }
+
+  .metric-label {
+    @apply truncate text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-500;
+  }
+}
+
+@layer utilities {
+  .animation-delay-150 {
+    animation-delay: 150ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .glow-dot-cyan {
+    box-shadow: 0 0 6px rgba(34, 211, 238, 0.45);
+  }
+
+  .glow-dot-emerald {
+    box-shadow: 0 0 6px rgba(52, 211, 153, 0.45);
+  }
+
+  .glow-dot-amber {
+    box-shadow: 0 0 6px rgba(251, 191, 36, 0.45);
+  }
+}

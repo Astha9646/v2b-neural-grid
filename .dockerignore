@@ -1,0 +1,46 @@
+# Git & IDE
+.git
+.gitignore
+.cursor
+.vscode
+*.md
+docs/
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.db
+*.sqlite3
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+npm-debug.log*
+
+# Large / runtime artifacts (mounted as volumes)
+logs/
+evaluation/
+notebooks/
+_ddpg_smoke_ckpt/
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Docker
+docker-compose.override.yml
+
+# Secrets
+.env
+.env.local
+*.pem
+*.key

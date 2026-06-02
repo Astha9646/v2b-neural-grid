@@ -1,0 +1,9 @@
+# Railway Nixpacks — Python 3.11 for V2B backend (torch CPU + FastAPI)
+# railway.json overrides install/start when both are present; this pins the runtime.
+
+[phases.setup]
+nixPkgs = ["python311", "gcc"]
+
+[variables]
+PYTHONUNBUFFERED = "1"
+PYTHONDONTWRITEBYTECODE = "1"

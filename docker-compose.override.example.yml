@@ -1,0 +1,7 @@
+# Optional local overrides — copy to docker-compose.override.yml
+# Exposes backend API directly on host for debugging (bypasses nginx)
+
+services:
+  backend:
+    ports:
+      - "8001:8001"

@@ -1,0 +1,3 @@
+# Deprecated — psutil is included in requirements-production.txt.
+# Kept for backward-compatible Docker layers; safe to remove from new builds.
+-r requirements-production.txt

@@ -1,0 +1,4410 @@
+{
+  "_meta": {
+    "end": "Sun, 22 Nov 2020 11:26:00 GMT",
+    "min_kWh": 0,
+    "site": "caltech",
+    "start": "Thu, 24 Sep 2020 11:25:00 GMT"
+  },
+  "_items": [
+    {
+      "_id": "synth_0000",
+      "sessionID": "sess_000000",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_004",
+      "spaceID": "space_35",
+      "connectionTime": "2020-10-05T06:50:12+00:00",
+      "disconnectTime": "2020-10-05T08:32:57+00:00",
+      "doneChargingTime": "2020-10-05T07:40:12+00:00",
+      "kWhDelivered": 1.3,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 1.39,
+          "minutesAvailable": 102,
+          "requestedDeparture": "2020-10-05T08:32:57+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0001",
+      "sessionID": "sess_000001",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_007",
+      "spaceID": "space_35",
+      "connectionTime": "2020-10-03T13:44:32+00:00",
+      "disconnectTime": "2020-10-03T17:06:02+00:00",
+      "doneChargingTime": "2020-10-03T15:41:12+00:00",
+      "kWhDelivered": 0.93,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_58",
+      "userInputs": [
+        {
+          "kWhRequested": 1.06,
+          "minutesAvailable": 201,
+          "requestedDeparture": "2020-10-03T17:06:02+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0002",
+      "sessionID": "sess_000002",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_011",
+      "spaceID": "space_7",
+      "connectionTime": "2020-10-09T23:26:59+00:00",
+      "disconnectTime": "2020-10-10T06:53:02+00:00",
+      "doneChargingTime": "2020-10-10T01:49:15+00:00",
+      "kWhDelivered": 2.82,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 2.65,
+          "minutesAvailable": 446,
+          "requestedDeparture": "2020-10-10T06:53:02+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0003",
+      "sessionID": "sess_000003",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_004",
+      "spaceID": "space_25",
+      "connectionTime": "2020-11-22T02:12:01+00:00",
+      "disconnectTime": "2020-11-22T05:56:55+00:00",
+      "doneChargingTime": "2020-11-22T02:50:29+00:00",
+      "kWhDelivered": 1.83,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 1.86,
+          "minutesAvailable": 224,
+          "requestedDeparture": "2020-11-22T05:56:55+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0004",
+      "sessionID": "sess_000004",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_010",
+      "spaceID": "space_6",
+      "connectionTime": "2020-11-19T12:44:40+00:00",
+      "disconnectTime": "2020-11-19T15:52:44+00:00",
+      "doneChargingTime": "2020-11-19T13:25:39+00:00",
+      "kWhDelivered": 2.71,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_13",
+      "userInputs": [
+        {
+          "kWhRequested": 2.85,
+          "minutesAvailable": 188,
+          "requestedDeparture": "2020-11-19T15:52:44+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0005",
+      "sessionID": "sess_000005",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_003",
+      "spaceID": "space_39",
+      "connectionTime": "2020-10-29T21:32:14+00:00",
+      "disconnectTime": "2020-10-30T00:25:11+00:00",
+      "doneChargingTime": "2020-10-29T22:53:01+00:00",
+      "kWhDelivered": 5.41,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_69",
+      "userInputs": [
+        {
+          "kWhRequested": 6.45,
+          "minutesAvailable": 172,
+          "requestedDeparture": "2020-10-30T00:25:11+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0006",
+      "sessionID": "sess_000006",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_018",
+      "spaceID": "space_15",
+      "connectionTime": "2020-11-08T08:33:39+00:00",
+      "disconnectTime": "2020-11-08T13:17:10+00:00",
+      "doneChargingTime": "2020-11-08T13:14:30+00:00",
+      "kWhDelivered": 18.04,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_8",
+      "userInputs": [
+        {
+          "kWhRequested": 17.89,
+          "minutesAvailable": 283,
+          "requestedDeparture": "2020-11-08T13:17:10+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0007",
+      "sessionID": "sess_000007",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_019",
+      "spaceID": "space_21",
+      "connectionTime": "2020-10-25T02:28:31+00:00",
+      "disconnectTime": "2020-10-25T07:23:06+00:00",
+      "doneChargingTime": "2020-10-25T03:16:01+00:00",
+      "kWhDelivered": 4.24,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_64",
+      "userInputs": [
+        {
+          "kWhRequested": 4.49,
+          "minutesAvailable": 294,
+          "requestedDeparture": "2020-10-25T07:23:06+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0008",
+      "sessionID": "sess_000008",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_009",
+      "spaceID": "space_38",
+      "connectionTime": "2020-10-08T08:19:53+00:00",
+      "disconnectTime": "2020-10-08T12:04:58+00:00",
+      "doneChargingTime": "2020-10-08T09:37:59+00:00",
+      "kWhDelivered": 4.45,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_75",
+      "userInputs": [
+        {
+          "kWhRequested": 4.72,
+          "minutesAvailable": 225,
+          "requestedDeparture": "2020-10-08T12:04:58+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0009",
+      "sessionID": "sess_000009",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_004",
+      "spaceID": "space_10",
+      "connectionTime": "2020-10-07T21:45:10+00:00",
+      "disconnectTime": "2020-10-08T03:35:01+00:00",
+      "doneChargingTime": "2020-10-07T22:44:14+00:00",
+      "kWhDelivered": 0.58,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_55",
+      "userInputs": [
+        {
+          "kWhRequested": 0.66,
+          "minutesAvailable": 349,
+          "requestedDeparture": "2020-10-08T03:35:01+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0010",
+      "sessionID": "sess_000010",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_018",
+      "spaceID": "space_1",
+      "connectionTime": "2020-10-31T12:39:14+00:00",
+      "disconnectTime": "2020-10-31T19:13:08+00:00",
+      "doneChargingTime": "2020-10-31T15:43:41+00:00",
+      "kWhDelivered": 5.28,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_15",
+      "userInputs": [
+        {
+          "kWhRequested": 6.19,
+          "minutesAvailable": 393,
+          "requestedDeparture": "2020-10-31T19:13:08+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0011",
+      "sessionID": "sess_000011",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_009",
+      "spaceID": "space_33",
+      "connectionTime": "2020-10-27T12:04:58+00:00",
+      "disconnectTime": "2020-10-27T14:31:51+00:00",
+      "doneChargingTime": "2020-10-27T13:25:47+00:00",
+      "kWhDelivered": 3.81,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_65",
+      "userInputs": [
+        {
+          "kWhRequested": 4.82,
+          "minutesAvailable": 146,
+          "requestedDeparture": "2020-10-27T14:31:51+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0012",
+      "sessionID": "sess_000012",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_018",
+      "spaceID": "space_34",
+      "connectionTime": "2020-11-12T18:21:24+00:00",
+      "disconnectTime": "2020-11-13T01:01:58+00:00",
+      "doneChargingTime": "2020-11-12T19:41:50+00:00",
+      "kWhDelivered": 6.07,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_77",
+      "userInputs": [
+        {
+          "kWhRequested": 6.25,
+          "minutesAvailable": 400,
+          "requestedDeparture": "2020-11-13T01:01:58+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0013",
+      "sessionID": "sess_000013",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_010",
+      "spaceID": "space_16",
+      "connectionTime": "2020-10-05T08:05:14+00:00",
+      "disconnectTime": "2020-10-05T17:29:04+00:00",
+      "doneChargingTime": "2020-10-05T13:25:12+00:00",
+      "kWhDelivered": 26.17,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 32.74,
+          "minutesAvailable": 563,
+          "requestedDeparture": "2020-10-05T17:29:04+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0014",
+      "sessionID": "sess_000014",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_018",
+      "spaceID": "space_9",
+      "connectionTime": "2020-10-02T19:00:13+00:00",
+      "disconnectTime": "2020-10-03T02:43:29+00:00",
+      "doneChargingTime": "2020-10-02T23:59:30+00:00",
+      "kWhDelivered": 28.49,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 31.06,
+          "minutesAvailable": 463,
+          "requestedDeparture": "2020-10-03T02:43:29+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0015",
+      "sessionID": "sess_000015",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_018",
+      "spaceID": "space_13",
+      "connectionTime": "2020-10-20T05:02:36+00:00",
+      "disconnectTime": "2020-10-20T11:01:42+00:00",
+      "doneChargingTime": "2020-10-20T08:52:14+00:00",
+      "kWhDelivered": 21.58,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_52",
+      "userInputs": [
+        {
+          "kWhRequested": 28.01,
+          "minutesAvailable": 359,
+          "requestedDeparture": "2020-10-20T11:01:42+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0016",
+      "sessionID": "sess_000016",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_003",
+      "spaceID": "space_22",
+      "connectionTime": "2020-11-06T00:15:49+00:00",
+      "disconnectTime": "2020-11-06T09:24:37+00:00",
+      "doneChargingTime": "2020-11-06T03:14:48+00:00",
+      "kWhDelivered": 5.06,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 5.68,
+          "minutesAvailable": 548,
+          "requestedDeparture": "2020-11-06T09:24:37+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0017",
+      "sessionID": "sess_000017",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_002",
+      "spaceID": "space_22",
+      "connectionTime": "2020-09-25T04:10:21+00:00",
+      "disconnectTime": "2020-09-25T06:16:33+00:00",
+      "doneChargingTime": "2020-09-25T05:41:03+00:00",
+      "kWhDelivered": 2.41,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 2.4,
+          "minutesAvailable": 126,
+          "requestedDeparture": "2020-09-25T06:16:33+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0018",
+      "sessionID": "sess_000018",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_019",
+      "spaceID": "space_31",
+      "connectionTime": "2020-10-15T06:37:28+00:00",
+      "disconnectTime": "2020-10-15T12:42:28+00:00",
+      "doneChargingTime": "2020-10-15T11:06:10+00:00",
+      "kWhDelivered": 23.23,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_61",
+      "userInputs": [
+        {
+          "kWhRequested": 28.41,
+          "minutesAvailable": 365,
+          "requestedDeparture": "2020-10-15T12:42:28+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0019",
+      "sessionID": "sess_000019",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_015",
+      "spaceID": "space_4",
+      "connectionTime": "2020-10-03T15:12:42+00:00",
+      "disconnectTime": "2020-10-03T17:32:08+00:00",
+      "doneChargingTime": "2020-10-03T16:29:52+00:00",
+      "kWhDelivered": 3.43,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_13",
+      "userInputs": [
+        {
+          "kWhRequested": 3.17,
+          "minutesAvailable": 139,
+          "requestedDeparture": "2020-10-03T17:32:08+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0020",
+      "sessionID": "sess_000020",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_014",
+      "spaceID": "space_12",
+      "connectionTime": "2020-10-05T02:01:55+00:00",
+      "disconnectTime": "2020-10-05T05:38:43+00:00",
+      "doneChargingTime": "2020-10-05T03:07:27+00:00",
+      "kWhDelivered": 3.06,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_32",
+      "userInputs": [
+        {
+          "kWhRequested": 3.82,
+          "minutesAvailable": 216,
+          "requestedDeparture": "2020-10-05T05:38:43+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0021",
+      "sessionID": "sess_000021",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_018",
+      "spaceID": "space_1",
+      "connectionTime": "2020-11-06T11:59:10+00:00",
+      "disconnectTime": "2020-11-06T20:21:15+00:00",
+      "doneChargingTime": "2020-11-06T17:11:38+00:00",
+      "kWhDelivered": 4.54,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_31",
+      "userInputs": [
+        {
+          "kWhRequested": 4.39,
+          "minutesAvailable": 502,
+          "requestedDeparture": "2020-11-06T20:21:15+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0022",
+      "sessionID": "sess_000022",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_013",
+      "spaceID": "space_1",
+      "connectionTime": "2020-11-10T05:03:47+00:00",
+      "disconnectTime": "2020-11-10T08:22:47+00:00",
+      "doneChargingTime": "2020-11-10T06:41:33+00:00",
+      "kWhDelivered": 1.07,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_34",
+      "userInputs": [
+        {
+          "kWhRequested": 1.36,
+          "minutesAvailable": 199,
+          "requestedDeparture": "2020-11-10T08:22:47+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0023",
+      "sessionID": "sess_000023",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_018",
+      "spaceID": "space_32",
+      "connectionTime": "2020-10-22T04:05:43+00:00",
+      "disconnectTime": "2020-10-22T09:11:27+00:00",
+      "doneChargingTime": "2020-10-22T08:59:40+00:00",
+      "kWhDelivered": 28.46,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 28.99,
+          "minutesAvailable": 305,
+          "requestedDeparture": "2020-10-22T09:11:27+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0024",
+      "sessionID": "sess_000024",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_002",
+      "spaceID": "space_38",
+      "connectionTime": "2020-11-19T17:00:16+00:00",
+      "disconnectTime": "2020-11-20T00:45:29+00:00",
+      "doneChargingTime": "2020-11-19T17:50:22+00:00",
+      "kWhDelivered": 1.72,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_68",
+      "userInputs": [
+        {
+          "kWhRequested": 1.66,
+          "minutesAvailable": 465,
+          "requestedDeparture": "2020-11-20T00:45:29+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0025",
+      "sessionID": "sess_000025",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_013",
+      "spaceID": "space_8",
+      "connectionTime": "2020-10-12T12:25:12+00:00",
+      "disconnectTime": "2020-10-12T14:30:08+00:00",
+      "doneChargingTime": "2020-10-12T13:01:39+00:00",
+      "kWhDelivered": 3.08,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_73",
+      "userInputs": [
+        {
+          "kWhRequested": 3.08,
+          "minutesAvailable": 124,
+          "requestedDeparture": "2020-10-12T14:30:08+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0026",
+      "sessionID": "sess_000026",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_009",
+      "spaceID": "space_14",
+      "connectionTime": "2020-10-02T10:27:06+00:00",
+      "disconnectTime": "2020-10-02T15:30:54+00:00",
+      "doneChargingTime": "2020-10-02T13:36:54+00:00",
+      "kWhDelivered": 10.15,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_41",
+      "userInputs": [
+        {
+          "kWhRequested": 10.1,
+          "minutesAvailable": 303,
+          "requestedDeparture": "2020-10-02T15:30:54+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0027",
+      "sessionID": "sess_000027",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_003",
+      "spaceID": "space_1",
+      "connectionTime": "2020-10-07T04:23:06+00:00",
+      "disconnectTime": "2020-10-07T11:35:39+00:00",
+      "doneChargingTime": "2020-10-07T06:32:05+00:00",
+      "kWhDelivered": 4.46,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_73",
+      "userInputs": [
+        {
+          "kWhRequested": 5.79,
+          "minutesAvailable": 432,
+          "requestedDeparture": "2020-10-07T11:35:39+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0028",
+      "sessionID": "sess_000028",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_003",
+      "spaceID": "space_16",
+      "connectionTime": "2020-11-15T16:11:44+00:00",
+      "disconnectTime": "2020-11-15T19:30:26+00:00",
+      "doneChargingTime": "2020-11-15T17:26:28+00:00",
+      "kWhDelivered": 6.81,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_21",
+      "userInputs": [
+        {
+          "kWhRequested": 7.32,
+          "minutesAvailable": 198,
+          "requestedDeparture": "2020-11-15T19:30:26+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0029",
+      "sessionID": "sess_000029",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_004",
+      "spaceID": "space_9",
+      "connectionTime": "2020-11-14T19:56:16+00:00",
+      "disconnectTime": "2020-11-14T21:30:15+00:00",
+      "doneChargingTime": "2020-11-14T21:18:33+00:00",
+      "kWhDelivered": 2.72,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_14",
+      "userInputs": [
+        {
+          "kWhRequested": 3.26,
+          "minutesAvailable": 93,
+          "requestedDeparture": "2020-11-14T21:30:15+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0030",
+      "sessionID": "sess_000030",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_009",
+      "spaceID": "space_33",
+      "connectionTime": "2020-10-20T22:02:02+00:00",
+      "disconnectTime": "2020-10-21T01:55:43+00:00",
+      "doneChargingTime": "2020-10-20T23:14:56+00:00",
+      "kWhDelivered": 2.7,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_7",
+      "userInputs": [
+        {
+          "kWhRequested": 2.53,
+          "minutesAvailable": 233,
+          "requestedDeparture": "2020-10-21T01:55:43+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0031",
+      "sessionID": "sess_000031",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_009",
+      "spaceID": "space_11",
+      "connectionTime": "2020-10-21T08:07:41+00:00",
+      "disconnectTime": "2020-10-21T10:00:10+00:00",
+      "doneChargingTime": "2020-10-21T09:05:11+00:00",
+      "kWhDelivered": 1.01,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_71",
+      "userInputs": [
+        {
+          "kWhRequested": 1.19,
+          "minutesAvailable": 112,
+          "requestedDeparture": "2020-10-21T10:00:10+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0032",
+      "sessionID": "sess_000032",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_018",
+      "spaceID": "space_3",
+      "connectionTime": "2020-10-05T08:06:06+00:00",
+      "disconnectTime": "2020-10-05T10:14:28+00:00",
+      "doneChargingTime": "2020-10-05T10:02:58+00:00",
+      "kWhDelivered": 10.33,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_75",
+      "userInputs": [
+        {
+          "kWhRequested": 11.58,
+          "minutesAvailable": 128,
+          "requestedDeparture": "2020-10-05T10:14:28+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0033",
+      "sessionID": "sess_000033",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_002",
+      "spaceID": "space_23",
+      "connectionTime": "2020-10-06T20:23:10+00:00",
+      "disconnectTime": "2020-10-06T22:14:29+00:00",
+      "doneChargingTime": "2020-10-06T21:22:49+00:00",
+      "kWhDelivered": 5.43,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_32",
+      "userInputs": [
+        {
+          "kWhRequested": 6.34,
+          "minutesAvailable": 111,
+          "requestedDeparture": "2020-10-06T22:14:29+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0034",
+      "sessionID": "sess_000034",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_005",
+      "spaceID": "space_16",
+      "connectionTime": "2020-11-17T20:02:23+00:00",
+      "disconnectTime": "2020-11-18T05:03:17+00:00",
+      "doneChargingTime": "2020-11-17T22:46:29+00:00",
+      "kWhDelivered": 10.25,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_23",
+      "userInputs": [
+        {
+          "kWhRequested": 12.84,
+          "minutesAvailable": 540,
+          "requestedDeparture": "2020-11-18T05:03:17+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0035",
+      "sessionID": "sess_000035",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_008",
+      "spaceID": "space_18",
+      "connectionTime": "2020-10-11T21:21:26+00:00",
+      "disconnectTime": "2020-10-12T05:07:04+00:00",
+      "doneChargingTime": "2020-10-11T23:41:03+00:00",
+      "kWhDelivered": 12.69,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 14.98,
+          "minutesAvailable": 465,
+          "requestedDeparture": "2020-10-12T05:07:04+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0036",
+      "sessionID": "sess_000036",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_015",
+      "spaceID": "space_23",
+      "connectionTime": "2020-09-28T05:39:05+00:00",
+      "disconnectTime": "2020-09-28T14:26:57+00:00",
+      "doneChargingTime": "2020-09-28T07:22:29+00:00",
+      "kWhDelivered": 8.31,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_30",
+      "userInputs": [
+        {
+          "kWhRequested": 8.22,
+          "minutesAvailable": 527,
+          "requestedDeparture": "2020-09-28T14:26:57+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0037",
+      "sessionID": "sess_000037",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_009",
+      "spaceID": "space_23",
+      "connectionTime": "2020-11-02T03:54:34+00:00",
+      "disconnectTime": "2020-11-02T08:11:58+00:00",
+      "doneChargingTime": "2020-11-02T07:41:07+00:00",
+      "kWhDelivered": 21.34,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_52",
+      "userInputs": [
+        {
+          "kWhRequested": 25.01,
+          "minutesAvailable": 257,
+          "requestedDeparture": "2020-11-02T08:11:58+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0038",
+      "sessionID": "sess_000038",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_009",
+      "spaceID": "space_3",
+      "connectionTime": "2020-09-27T03:43:50+00:00",
+      "disconnectTime": "2020-09-27T06:12:39+00:00",
+      "doneChargingTime": "2020-09-27T06:09:08+00:00",
+      "kWhDelivered": 3.19,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 3.43,
+          "minutesAvailable": 148,
+          "requestedDeparture": "2020-09-27T06:12:39+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0039",
+      "sessionID": "sess_000039",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_019",
+      "spaceID": "space_13",
+      "connectionTime": "2020-11-05T20:17:17+00:00",
+      "disconnectTime": "2020-11-06T02:56:26+00:00",
+      "doneChargingTime": "2020-11-05T23:36:03+00:00",
+      "kWhDelivered": 8.12,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_56",
+      "userInputs": [
+        {
+          "kWhRequested": 7.31,
+          "minutesAvailable": 399,
+          "requestedDeparture": "2020-11-06T02:56:26+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0040",
+      "sessionID": "sess_000040",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_020",
+      "spaceID": "space_21",
+      "connectionTime": "2020-10-29T20:06:51+00:00",
+      "disconnectTime": "2020-10-30T01:16:48+00:00",
+      "doneChargingTime": "2020-10-30T01:02:29+00:00",
+      "kWhDelivered": 26.6,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_16",
+      "userInputs": [
+        {
+          "kWhRequested": 31.6,
+          "minutesAvailable": 309,
+          "requestedDeparture": "2020-10-30T01:16:48+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0041",
+      "sessionID": "sess_000041",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_010",
+      "spaceID": "space_36",
+      "connectionTime": "2020-11-12T17:05:51+00:00",
+      "disconnectTime": "2020-11-12T21:13:35+00:00",
+      "doneChargingTime": "2020-11-12T19:04:46+00:00",
+      "kWhDelivered": 5.05,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 5.39,
+          "minutesAvailable": 247,
+          "requestedDeparture": "2020-11-12T21:13:35+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0042",
+      "sessionID": "sess_000042",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_001",
+      "spaceID": "space_20",
+      "connectionTime": "2020-10-11T08:55:47+00:00",
+      "disconnectTime": "2020-10-11T15:39:41+00:00",
+      "doneChargingTime": "2020-10-11T11:05:05+00:00",
+      "kWhDelivered": 7.21,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_56",
+      "userInputs": [
+        {
+          "kWhRequested": 8.76,
+          "minutesAvailable": 403,
+          "requestedDeparture": "2020-10-11T15:39:41+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0043",
+      "sessionID": "sess_000043",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_006",
+      "spaceID": "space_6",
+      "connectionTime": "2020-11-08T14:55:03+00:00",
+      "disconnectTime": "2020-11-08T20:10:21+00:00",
+      "doneChargingTime": "2020-11-08T18:37:48+00:00",
+      "kWhDelivered": 11.68,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_80",
+      "userInputs": [
+        {
+          "kWhRequested": 12.08,
+          "minutesAvailable": 315,
+          "requestedDeparture": "2020-11-08T20:10:21+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0044",
+      "sessionID": "sess_000044",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_008",
+      "spaceID": "space_31",
+      "connectionTime": "2020-10-24T14:44:47+00:00",
+      "disconnectTime": "2020-10-24T18:09:21+00:00",
+      "doneChargingTime": "2020-10-24T15:49:32+00:00",
+      "kWhDelivered": 0.5,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_10",
+      "userInputs": [
+        {
+          "kWhRequested": 0.54,
+          "minutesAvailable": 204,
+          "requestedDeparture": "2020-10-24T18:09:21+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0045",
+      "sessionID": "sess_000045",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_001",
+      "spaceID": "space_7",
+      "connectionTime": "2020-10-31T18:09:04+00:00",
+      "disconnectTime": "2020-10-31T23:51:11+00:00",
+      "doneChargingTime": "2020-10-31T19:55:13+00:00",
+      "kWhDelivered": 6.97,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_29",
+      "userInputs": [
+        {
+          "kWhRequested": 6.76,
+          "minutesAvailable": 342,
+          "requestedDeparture": "2020-10-31T23:51:11+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0046",
+      "sessionID": "sess_000046",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_005",
+      "spaceID": "space_30",
+      "connectionTime": "2020-09-29T08:26:02+00:00",
+      "disconnectTime": "2020-09-29T14:40:18+00:00",
+      "doneChargingTime": "2020-09-29T13:58:47+00:00",
+      "kWhDelivered": 5.55,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_72",
+      "userInputs": [
+        {
+          "kWhRequested": 6.32,
+          "minutesAvailable": 374,
+          "requestedDeparture": "2020-09-29T14:40:18+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0047",
+      "sessionID": "sess_000047",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_006",
+      "spaceID": "space_31",
+      "connectionTime": "2020-11-12T11:38:06+00:00",
+      "disconnectTime": "2020-11-12T16:45:44+00:00",
+      "doneChargingTime": "2020-11-12T16:19:52+00:00",
+      "kWhDelivered": 13.08,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_32",
+      "userInputs": [
+        {
+          "kWhRequested": 16.17,
+          "minutesAvailable": 307,
+          "requestedDeparture": "2020-11-12T16:45:44+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0048",
+      "sessionID": "sess_000048",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_010",
+      "spaceID": "space_16",
+      "connectionTime": "2020-11-14T02:07:59+00:00",
+      "disconnectTime": "2020-11-14T07:45:07+00:00",
+      "doneChargingTime": "2020-11-14T03:51:27+00:00",
+      "kWhDelivered": 4.75,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_41",
+      "userInputs": [
+        {
+          "kWhRequested": 5.97,
+          "minutesAvailable": 337,
+          "requestedDeparture": "2020-11-14T07:45:07+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0049",
+      "sessionID": "sess_000049",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_007",
+      "spaceID": "space_5",
+      "connectionTime": "2020-10-07T21:51:05+00:00",
+      "disconnectTime": "2020-10-08T00:38:00+00:00",
+      "doneChargingTime": "2020-10-07T23:13:31+00:00",
+      "kWhDelivered": 1.61,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_43",
+      "userInputs": [
+        {
+          "kWhRequested": 1.8,
+          "minutesAvailable": 166,
+          "requestedDeparture": "2020-10-08T00:38:00+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0050",
+      "sessionID": "sess_000050",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_019",
+      "spaceID": "space_2",
+      "connectionTime": "2020-09-30T12:30:22+00:00",
+      "disconnectTime": "2020-09-30T15:45:51+00:00",
+      "doneChargingTime": "2020-09-30T14:09:53+00:00",
+      "kWhDelivered": 8.81,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_74",
+      "userInputs": [
+        {
+          "kWhRequested": 9.27,
+          "minutesAvailable": 195,
+          "requestedDeparture": "2020-09-30T15:45:51+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0051",
+      "sessionID": "sess_000051",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_014",
+      "spaceID": "space_35",
+      "connectionTime": "2020-10-28T15:04:26+00:00",
+      "disconnectTime": "2020-10-28T19:06:43+00:00",
+      "doneChargingTime": "2020-10-28T16:57:13+00:00",
+      "kWhDelivered": 9.85,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_70",
+      "userInputs": [
+        {
+          "kWhRequested": 12.02,
+          "minutesAvailable": 242,
+          "requestedDeparture": "2020-10-28T19:06:43+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0052",
+      "sessionID": "sess_000052",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_011",
+      "spaceID": "space_26",
+      "connectionTime": "2020-11-10T21:04:25+00:00",
+      "disconnectTime": "2020-11-11T00:26:19+00:00",
+      "doneChargingTime": "2020-11-10T22:49:20+00:00",
+      "kWhDelivered": 0.86,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_60",
+      "userInputs": [
+        {
+          "kWhRequested": 1.09,
+          "minutesAvailable": 201,
+          "requestedDeparture": "2020-11-11T00:26:19+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0053",
+      "sessionID": "sess_000053",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_014",
+      "spaceID": "space_9",
+      "connectionTime": "2020-11-01T17:33:01+00:00",
+      "disconnectTime": "2020-11-02T00:04:52+00:00",
+      "doneChargingTime": "2020-11-01T21:41:48+00:00",
+      "kWhDelivered": 3.3,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_24",
+      "userInputs": [
+        {
+          "kWhRequested": 3.04,
+          "minutesAvailable": 391,
+          "requestedDeparture": "2020-11-02T00:04:52+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0054",
+      "sessionID": "sess_000054",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_013",
+      "spaceID": "space_18",
+      "connectionTime": "2020-10-26T06:12:13+00:00",
+      "disconnectTime": "2020-10-26T09:30:09+00:00",
+      "doneChargingTime": "2020-10-26T07:37:06+00:00",
+      "kWhDelivered": 6.4,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_54",
+      "userInputs": [
+        {
+          "kWhRequested": 6.41,
+          "minutesAvailable": 197,
+          "requestedDeparture": "2020-10-26T09:30:09+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0055",
+      "sessionID": "sess_000055",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_012",
+      "spaceID": "space_15",
+      "connectionTime": "2020-11-09T03:18:39+00:00",
+      "disconnectTime": "2020-11-09T04:58:32+00:00",
+      "doneChargingTime": "2020-11-09T04:26:20+00:00",
+      "kWhDelivered": 6.58,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_6",
+      "userInputs": [
+        {
+          "kWhRequested": 7.91,
+          "minutesAvailable": 99,
+          "requestedDeparture": "2020-11-09T04:58:32+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0056",
+      "sessionID": "sess_000056",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_016",
+      "spaceID": "space_8",
+      "connectionTime": "2020-10-13T19:57:38+00:00",
+      "disconnectTime": "2020-10-14T04:35:38+00:00",
+      "doneChargingTime": "2020-10-13T23:52:40+00:00",
+      "kWhDelivered": 6.45,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_28",
+      "userInputs": [
+        {
+          "kWhRequested": 7.0,
+          "minutesAvailable": 518,
+          "requestedDeparture": "2020-10-14T04:35:38+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0057",
+      "sessionID": "sess_000057",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_004",
+      "spaceID": "space_11",
+      "connectionTime": "2020-10-30T07:00:17+00:00",
+      "disconnectTime": "2020-10-30T09:55:51+00:00",
+      "doneChargingTime": "2020-10-30T08:58:40+00:00",
+      "kWhDelivered": 8.78,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_14",
+      "userInputs": [
+        {
+          "kWhRequested": 9.93,
+          "minutesAvailable": 175,
+          "requestedDeparture": "2020-10-30T09:55:51+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0058",
+      "sessionID": "sess_000058",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_007",
+      "spaceID": "space_5",
+      "connectionTime": "2020-11-19T09:07:13+00:00",
+      "disconnectTime": "2020-11-19T16:22:39+00:00",
+      "doneChargingTime": "2020-11-19T14:53:24+00:00",
+      "kWhDelivered": 14.51,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_32",
+      "userInputs": [
+        {
+          "kWhRequested": 13.65,
+          "minutesAvailable": 435,
+          "requestedDeparture": "2020-11-19T16:22:39+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0059",
+      "sessionID": "sess_000059",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_002",
+      "spaceID": "space_23",
+      "connectionTime": "2020-11-21T18:28:37+00:00",
+      "disconnectTime": "2020-11-22T02:49:26+00:00",
+      "doneChargingTime": "2020-11-21T23:21:22+00:00",
+      "kWhDelivered": 16.81,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_48",
+      "userInputs": [
+        {
+          "kWhRequested": 15.59,
+          "minutesAvailable": 500,
+          "requestedDeparture": "2020-11-22T02:49:26+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0060",
+      "sessionID": "sess_000060",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_012",
+      "spaceID": "space_30",
+      "connectionTime": "2020-09-25T16:53:53+00:00",
+      "disconnectTime": "2020-09-26T01:37:10+00:00",
+      "doneChargingTime": "2020-09-25T21:55:15+00:00",
+      "kWhDelivered": 4.59,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_56",
+      "userInputs": [
+        {
+          "kWhRequested": 4.45,
+          "minutesAvailable": 523,
+          "requestedDeparture": "2020-09-26T01:37:10+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0061",
+      "sessionID": "sess_000061",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_019",
+      "spaceID": "space_18",
+      "connectionTime": "2020-11-15T17:27:01+00:00",
+      "disconnectTime": "2020-11-16T01:32:05+00:00",
+      "doneChargingTime": "2020-11-15T20:30:25+00:00",
+      "kWhDelivered": 14.9,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_32",
+      "userInputs": [
+        {
+          "kWhRequested": 18.36,
+          "minutesAvailable": 485,
+          "requestedDeparture": "2020-11-16T01:32:05+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0062",
+      "sessionID": "sess_000062",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_020",
+      "spaceID": "space_25",
+      "connectionTime": "2020-10-21T13:21:59+00:00",
+      "disconnectTime": "2020-10-21T22:21:36+00:00",
+      "doneChargingTime": "2020-10-21T15:12:27+00:00",
+      "kWhDelivered": 5.32,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_64",
+      "userInputs": [
+        {
+          "kWhRequested": 6.6,
+          "minutesAvailable": 539,
+          "requestedDeparture": "2020-10-21T22:21:36+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0063",
+      "sessionID": "sess_000063",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_020",
+      "spaceID": "space_18",
+      "connectionTime": "2020-11-10T19:29:25+00:00",
+      "disconnectTime": "2020-11-10T22:47:35+00:00",
+      "doneChargingTime": "2020-11-10T22:13:35+00:00",
+      "kWhDelivered": 6.03,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_67",
+      "userInputs": [
+        {
+          "kWhRequested": 7.71,
+          "minutesAvailable": 198,
+          "requestedDeparture": "2020-11-10T22:47:35+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0064",
+      "sessionID": "sess_000064",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_016",
+      "spaceID": "space_32",
+      "connectionTime": "2020-10-17T21:49:01+00:00",
+      "disconnectTime": "2020-10-18T05:26:15+00:00",
+      "doneChargingTime": "2020-10-18T01:00:14+00:00",
+      "kWhDelivered": 14.35,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_3",
+      "userInputs": [
+        {
+          "kWhRequested": 13.45,
+          "minutesAvailable": 457,
+          "requestedDeparture": "2020-10-18T05:26:15+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0065",
+      "sessionID": "sess_000065",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_016",
+      "spaceID": "space_36",
+      "connectionTime": "2020-11-02T17:44:22+00:00",
+      "disconnectTime": "2020-11-03T01:07:10+00:00",
+      "doneChargingTime": "2020-11-02T19:55:24+00:00",
+      "kWhDelivered": 7.71,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_55",
+      "userInputs": [
+        {
+          "kWhRequested": 10.01,
+          "minutesAvailable": 442,
+          "requestedDeparture": "2020-11-03T01:07:10+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0066",
+      "sessionID": "sess_000066",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_004",
+      "spaceID": "space_13",
+      "connectionTime": "2020-10-28T15:11:40+00:00",
+      "disconnectTime": "2020-10-28T22:40:07+00:00",
+      "doneChargingTime": "2020-10-28T17:11:04+00:00",
+      "kWhDelivered": 3.42,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_69",
+      "userInputs": [
+        {
+          "kWhRequested": 4.38,
+          "minutesAvailable": 448,
+          "requestedDeparture": "2020-10-28T22:40:07+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0067",
+      "sessionID": "sess_000067",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_017",
+      "spaceID": "space_39",
+      "connectionTime": "2020-10-13T01:44:22+00:00",
+      "disconnectTime": "2020-10-13T05:04:43+00:00",
+      "doneChargingTime": "2020-10-13T03:36:51+00:00",
+      "kWhDelivered": 8.1,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_13",
+      "userInputs": [
+        {
+          "kWhRequested": 9.99,
+          "minutesAvailable": 200,
+          "requestedDeparture": "2020-10-13T05:04:43+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0068",
+      "sessionID": "sess_000068",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_005",
+      "spaceID": "space_18",
+      "connectionTime": "2020-10-16T13:29:27+00:00",
+      "disconnectTime": "2020-10-16T18:03:29+00:00",
+      "doneChargingTime": "2020-10-16T15:13:13+00:00",
+      "kWhDelivered": 7.31,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 6.74,
+          "minutesAvailable": 274,
+          "requestedDeparture": "2020-10-16T18:03:29+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0069",
+      "sessionID": "sess_000069",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_001",
+      "spaceID": "space_37",
+      "connectionTime": "2020-10-06T17:40:09+00:00",
+      "disconnectTime": "2020-10-07T00:35:27+00:00",
+      "doneChargingTime": "2020-10-06T22:18:34+00:00",
+      "kWhDelivered": 4.17,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_62",
+      "userInputs": [
+        {
+          "kWhRequested": 4.49,
+          "minutesAvailable": 415,
+          "requestedDeparture": "2020-10-07T00:35:27+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0070",
+      "sessionID": "sess_000070",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_003",
+      "spaceID": "space_26",
+      "connectionTime": "2020-09-29T11:07:59+00:00",
+      "disconnectTime": "2020-09-29T14:46:44+00:00",
+      "doneChargingTime": "2020-09-29T14:20:38+00:00",
+      "kWhDelivered": 3.09,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_74",
+      "userInputs": [
+        {
+          "kWhRequested": 3.56,
+          "minutesAvailable": 218,
+          "requestedDeparture": "2020-09-29T14:46:44+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0071",
+      "sessionID": "sess_000071",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_008",
+      "spaceID": "space_8",
+      "connectionTime": "2020-10-09T04:57:58+00:00",
+      "disconnectTime": "2020-10-09T07:44:03+00:00",
+      "doneChargingTime": "2020-10-09T06:44:33+00:00",
+      "kWhDelivered": 3.56,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_54",
+      "userInputs": [
+        {
+          "kWhRequested": 4.07,
+          "minutesAvailable": 166,
+          "requestedDeparture": "2020-10-09T07:44:03+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0072",
+      "sessionID": "sess_000072",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_019",
+      "spaceID": "space_28",
+      "connectionTime": "2020-11-14T05:05:56+00:00",
+      "disconnectTime": "2020-11-14T09:49:55+00:00",
+      "doneChargingTime": "2020-11-14T09:26:41+00:00",
+      "kWhDelivered": 8.56,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_80",
+      "userInputs": [
+        {
+          "kWhRequested": 7.91,
+          "minutesAvailable": 283,
+          "requestedDeparture": "2020-11-14T09:49:55+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0073",
+      "sessionID": "sess_000073",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_008",
+      "spaceID": "space_12",
+      "connectionTime": "2020-10-14T15:35:51+00:00",
+      "disconnectTime": "2020-10-14T22:24:51+00:00",
+      "doneChargingTime": "2020-10-14T17:33:10+00:00",
+      "kWhDelivered": 1.53,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_21",
+      "userInputs": [
+        {
+          "kWhRequested": 1.38,
+          "minutesAvailable": 409,
+          "requestedDeparture": "2020-10-14T22:24:51+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0074",
+      "sessionID": "sess_000074",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_010",
+      "spaceID": "space_30",
+      "connectionTime": "2020-11-21T03:05:49+00:00",
+      "disconnectTime": "2020-11-21T08:35:28+00:00",
+      "doneChargingTime": "2020-11-21T03:45:35+00:00",
+      "kWhDelivered": 1.27,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 1.26,
+          "minutesAvailable": 329,
+          "requestedDeparture": "2020-11-21T08:35:28+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0075",
+      "sessionID": "sess_000075",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_018",
+      "spaceID": "space_15",
+      "connectionTime": "2020-11-20T17:43:33+00:00",
+      "disconnectTime": "2020-11-21T00:50:45+00:00",
+      "doneChargingTime": "2020-11-20T23:21:39+00:00",
+      "kWhDelivered": 15.05,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_35",
+      "userInputs": [
+        {
+          "kWhRequested": 18.52,
+          "minutesAvailable": 427,
+          "requestedDeparture": "2020-11-21T00:50:45+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0076",
+      "sessionID": "sess_000076",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_019",
+      "spaceID": "space_19",
+      "connectionTime": "2020-09-30T06:23:00+00:00",
+      "disconnectTime": "2020-09-30T09:17:37+00:00",
+      "doneChargingTime": "2020-09-30T07:37:29+00:00",
+      "kWhDelivered": 5.53,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_60",
+      "userInputs": [
+        {
+          "kWhRequested": 6.5,
+          "minutesAvailable": 174,
+          "requestedDeparture": "2020-09-30T09:17:37+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0077",
+      "sessionID": "sess_000077",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_002",
+      "spaceID": "space_28",
+      "connectionTime": "2020-10-20T21:47:46+00:00",
+      "disconnectTime": "2020-10-21T03:33:00+00:00",
+      "doneChargingTime": "2020-10-21T00:53:25+00:00",
+      "kWhDelivered": 2.4,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_78",
+      "userInputs": [
+        {
+          "kWhRequested": 2.4,
+          "minutesAvailable": 345,
+          "requestedDeparture": "2020-10-21T03:33:00+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0078",
+      "sessionID": "sess_000078",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_001",
+      "spaceID": "space_18",
+      "connectionTime": "2020-10-16T16:50:57+00:00",
+      "disconnectTime": "2020-10-17T02:31:31+00:00",
+      "doneChargingTime": "2020-10-16T21:56:48+00:00",
+      "kWhDelivered": 17.83,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_23",
+      "userInputs": [
+        {
+          "kWhRequested": 19.4,
+          "minutesAvailable": 580,
+          "requestedDeparture": "2020-10-17T02:31:31+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0079",
+      "sessionID": "sess_000079",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_016",
+      "spaceID": "space_6",
+      "connectionTime": "2020-10-21T11:34:06+00:00",
+      "disconnectTime": "2020-10-21T14:36:39+00:00",
+      "doneChargingTime": "2020-10-21T13:33:23+00:00",
+      "kWhDelivered": 7.6,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_53",
+      "userInputs": [
+        {
+          "kWhRequested": 7.85,
+          "minutesAvailable": 182,
+          "requestedDeparture": "2020-10-21T14:36:39+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0080",
+      "sessionID": "sess_000080",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_013",
+      "spaceID": "space_36",
+      "connectionTime": "2020-10-10T02:09:56+00:00",
+      "disconnectTime": "2020-10-10T06:28:07+00:00",
+      "doneChargingTime": "2020-10-10T05:18:13+00:00",
+      "kWhDelivered": 6.02,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 5.63,
+          "minutesAvailable": 258,
+          "requestedDeparture": "2020-10-10T06:28:07+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0081",
+      "sessionID": "sess_000081",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_001",
+      "spaceID": "space_35",
+      "connectionTime": "2020-10-25T20:41:57+00:00",
+      "disconnectTime": "2020-10-25T23:11:04+00:00",
+      "doneChargingTime": "2020-10-25T22:43:58+00:00",
+      "kWhDelivered": 10.35,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_7",
+      "userInputs": [
+        {
+          "kWhRequested": 10.09,
+          "minutesAvailable": 149,
+          "requestedDeparture": "2020-10-25T23:11:04+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0082",
+      "sessionID": "sess_000082",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_018",
+      "spaceID": "space_9",
+      "connectionTime": "2020-11-11T20:59:23+00:00",
+      "disconnectTime": "2020-11-12T03:48:20+00:00",
+      "doneChargingTime": "2020-11-12T01:40:10+00:00",
+      "kWhDelivered": 6.8,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_57",
+      "userInputs": [
+        {
+          "kWhRequested": 8.52,
+          "minutesAvailable": 408,
+          "requestedDeparture": "2020-11-12T03:48:20+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0083",
+      "sessionID": "sess_000083",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_006",
+      "spaceID": "space_20",
+      "connectionTime": "2020-10-06T06:21:35+00:00",
+      "disconnectTime": "2020-10-06T08:06:18+00:00",
+      "doneChargingTime": "2020-10-06T07:38:39+00:00",
+      "kWhDelivered": 6.08,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_71",
+      "userInputs": [
+        {
+          "kWhRequested": 6.46,
+          "minutesAvailable": 104,
+          "requestedDeparture": "2020-10-06T08:06:18+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0084",
+      "sessionID": "sess_000084",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_016",
+      "spaceID": "space_19",
+      "connectionTime": "2020-10-05T11:48:00+00:00",
+      "disconnectTime": "2020-10-05T17:13:20+00:00",
+      "doneChargingTime": "2020-10-05T12:52:41+00:00",
+      "kWhDelivered": 5.29,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_35",
+      "userInputs": [
+        {
+          "kWhRequested": 5.64,
+          "minutesAvailable": 325,
+          "requestedDeparture": "2020-10-05T17:13:20+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0085",
+      "sessionID": "sess_000085",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_020",
+      "spaceID": "space_33",
+      "connectionTime": "2020-11-09T07:46:06+00:00",
+      "disconnectTime": "2020-11-09T11:20:24+00:00",
+      "doneChargingTime": "2020-11-09T09:57:41+00:00",
+      "kWhDelivered": 5.36,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_18",
+      "userInputs": [
+        {
+          "kWhRequested": 6.68,
+          "minutesAvailable": 214,
+          "requestedDeparture": "2020-11-09T11:20:24+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0086",
+      "sessionID": "sess_000086",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_001",
+      "spaceID": "space_19",
+      "connectionTime": "2020-11-03T18:18:09+00:00",
+      "disconnectTime": "2020-11-03T22:41:29+00:00",
+      "doneChargingTime": "2020-11-03T21:51:57+00:00",
+      "kWhDelivered": 6.42,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_76",
+      "userInputs": [
+        {
+          "kWhRequested": 7.27,
+          "minutesAvailable": 263,
+          "requestedDeparture": "2020-11-03T22:41:29+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0087",
+      "sessionID": "sess_000087",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_018",
+      "spaceID": "space_25",
+      "connectionTime": "2020-10-08T21:40:08+00:00",
+      "disconnectTime": "2020-10-09T02:57:52+00:00",
+      "doneChargingTime": "2020-10-09T00:29:29+00:00",
+      "kWhDelivered": 6.1,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_42",
+      "userInputs": [
+        {
+          "kWhRequested": 7.61,
+          "minutesAvailable": 317,
+          "requestedDeparture": "2020-10-09T02:57:52+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0088",
+      "sessionID": "sess_000088",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_011",
+      "spaceID": "space_31",
+      "connectionTime": "2020-11-18T23:48:06+00:00",
+      "disconnectTime": "2020-11-19T04:33:24+00:00",
+      "doneChargingTime": "2020-11-19T03:56:39+00:00",
+      "kWhDelivered": 10.74,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_49",
+      "userInputs": [
+        {
+          "kWhRequested": 11.32,
+          "minutesAvailable": 285,
+          "requestedDeparture": "2020-11-19T04:33:24+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0089",
+      "sessionID": "sess_000089",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_011",
+      "spaceID": "space_7",
+      "connectionTime": "2020-11-11T13:36:57+00:00",
+      "disconnectTime": "2020-11-11T23:19:00+00:00",
+      "doneChargingTime": "2020-11-11T14:48:36+00:00",
+      "kWhDelivered": 6.74,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_57",
+      "userInputs": [
+        {
+          "kWhRequested": 6.33,
+          "minutesAvailable": 582,
+          "requestedDeparture": "2020-11-11T23:19:00+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0090",
+      "sessionID": "sess_000090",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_005",
+      "spaceID": "space_5",
+      "connectionTime": "2020-09-25T23:10:44+00:00",
+      "disconnectTime": "2020-09-26T06:49:10+00:00",
+      "doneChargingTime": "2020-09-26T01:56:01+00:00",
+      "kWhDelivered": 10.84,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_34",
+      "userInputs": [
+        {
+          "kWhRequested": 11.22,
+          "minutesAvailable": 458,
+          "requestedDeparture": "2020-09-26T06:49:10+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0091",
+      "sessionID": "sess_000091",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_013",
+      "spaceID": "space_21",
+      "connectionTime": "2020-10-02T06:33:53+00:00",
+      "disconnectTime": "2020-10-02T15:18:17+00:00",
+      "doneChargingTime": "2020-10-02T11:45:09+00:00",
+      "kWhDelivered": 26.25,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_63",
+      "userInputs": [
+        {
+          "kWhRequested": 32.79,
+          "minutesAvailable": 524,
+          "requestedDeparture": "2020-10-02T15:18:17+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0092",
+      "sessionID": "sess_000092",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_008",
+      "spaceID": "space_6",
+      "connectionTime": "2020-10-01T02:50:54+00:00",
+      "disconnectTime": "2020-10-01T06:20:37+00:00",
+      "doneChargingTime": "2020-10-01T05:23:54+00:00",
+      "kWhDelivered": 4.88,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_13",
+      "userInputs": [
+        {
+          "kWhRequested": 5.88,
+          "minutesAvailable": 209,
+          "requestedDeparture": "2020-10-01T06:20:37+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0093",
+      "sessionID": "sess_000093",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_011",
+      "spaceID": "space_4",
+      "connectionTime": "2020-11-06T13:15:45+00:00",
+      "disconnectTime": "2020-11-06T16:10:35+00:00",
+      "doneChargingTime": "2020-11-06T14:29:07+00:00",
+      "kWhDelivered": 0.6,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_48",
+      "userInputs": [
+        {
+          "kWhRequested": 0.64,
+          "minutesAvailable": 174,
+          "requestedDeparture": "2020-11-06T16:10:35+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0094",
+      "sessionID": "sess_000094",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_006",
+      "spaceID": "space_6",
+      "connectionTime": "2020-11-15T01:07:26+00:00",
+      "disconnectTime": "2020-11-15T06:07:34+00:00",
+      "doneChargingTime": "2020-11-15T04:41:37+00:00",
+      "kWhDelivered": 4.73,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_49",
+      "userInputs": [
+        {
+          "kWhRequested": 5.43,
+          "minutesAvailable": 300,
+          "requestedDeparture": "2020-11-15T06:07:34+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0095",
+      "sessionID": "sess_000095",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_009",
+      "spaceID": "space_30",
+      "connectionTime": "2020-11-11T19:03:55+00:00",
+      "disconnectTime": "2020-11-12T04:19:27+00:00",
+      "doneChargingTime": "2020-11-11T20:21:08+00:00",
+      "kWhDelivered": 3.69,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_2",
+      "userInputs": [
+        {
+          "kWhRequested": 4.65,
+          "minutesAvailable": 555,
+          "requestedDeparture": "2020-11-12T04:19:27+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0096",
+      "sessionID": "sess_000096",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_012",
+      "spaceID": "space_38",
+      "connectionTime": "2020-10-22T09:38:49+00:00",
+      "disconnectTime": "2020-10-22T16:54:23+00:00",
+      "doneChargingTime": "2020-10-22T11:00:56+00:00",
+      "kWhDelivered": 3.78,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_55",
+      "userInputs": [
+        {
+          "kWhRequested": 4.45,
+          "minutesAvailable": 435,
+          "requestedDeparture": "2020-10-22T16:54:23+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0097",
+      "sessionID": "sess_000097",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_008",
+      "spaceID": "space_25",
+      "connectionTime": "2020-10-23T19:24:40+00:00",
+      "disconnectTime": "2020-10-23T22:36:16+00:00",
+      "doneChargingTime": "2020-10-23T20:56:50+00:00",
+      "kWhDelivered": 4.59,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_74",
+      "userInputs": [
+        {
+          "kWhRequested": 4.67,
+          "minutesAvailable": 191,
+          "requestedDeparture": "2020-10-23T22:36:16+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0098",
+      "sessionID": "sess_000098",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_019",
+      "spaceID": "space_4",
+      "connectionTime": "2020-09-26T14:32:22+00:00",
+      "disconnectTime": "2020-09-27T00:21:07+00:00",
+      "doneChargingTime": "2020-09-26T18:39:34+00:00",
+      "kWhDelivered": 7.59,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_64",
+      "userInputs": [
+        {
+          "kWhRequested": 9.36,
+          "minutesAvailable": 588,
+          "requestedDeparture": "2020-09-27T00:21:07+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0099",
+      "sessionID": "sess_000099",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_020",
+      "spaceID": "space_17",
+      "connectionTime": "2020-10-16T19:37:52+00:00",
+      "disconnectTime": "2020-10-17T02:17:28+00:00",
+      "doneChargingTime": "2020-10-16T22:04:07+00:00",
+      "kWhDelivered": 9.35,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_18",
+      "userInputs": [
+        {
+          "kWhRequested": 10.76,
+          "minutesAvailable": 399,
+          "requestedDeparture": "2020-10-17T02:17:28+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0100",
+      "sessionID": "sess_000100",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_005",
+      "spaceID": "space_6",
+      "connectionTime": "2020-10-24T11:16:56+00:00",
+      "disconnectTime": "2020-10-24T19:29:07+00:00",
+      "doneChargingTime": "2020-10-24T11:57:56+00:00",
+      "kWhDelivered": 1.6,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_42",
+      "userInputs": [
+        {
+          "kWhRequested": 1.92,
+          "minutesAvailable": 492,
+          "requestedDeparture": "2020-10-24T19:29:07+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0101",
+      "sessionID": "sess_000101",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_017",
+      "spaceID": "space_33",
+      "connectionTime": "2020-10-13T23:18:08+00:00",
+      "disconnectTime": "2020-10-14T01:55:32+00:00",
+      "doneChargingTime": "2020-10-14T00:56:51+00:00",
+      "kWhDelivered": 9.34,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_22",
+      "userInputs": [
+        {
+          "kWhRequested": 9.37,
+          "minutesAvailable": 157,
+          "requestedDeparture": "2020-10-14T01:55:32+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0102",
+      "sessionID": "sess_000102",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_003",
+      "spaceID": "space_10",
+      "connectionTime": "2020-10-23T03:08:45+00:00",
+      "disconnectTime": "2020-10-23T10:59:29+00:00",
+      "doneChargingTime": "2020-10-23T05:30:31+00:00",
+      "kWhDelivered": 2.28,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_29",
+      "userInputs": [
+        {
+          "kWhRequested": 2.84,
+          "minutesAvailable": 470,
+          "requestedDeparture": "2020-10-23T10:59:29+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0103",
+      "sessionID": "sess_000103",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_018",
+      "spaceID": "space_8",
+      "connectionTime": "2020-11-17T14:02:57+00:00",
+      "disconnectTime": "2020-11-17T18:39:29+00:00",
+      "doneChargingTime": "2020-11-17T17:47:53+00:00",
+      "kWhDelivered": 1.54,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_34",
+      "userInputs": [
+        {
+          "kWhRequested": 1.75,
+          "minutesAvailable": 276,
+          "requestedDeparture": "2020-11-17T18:39:29+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0104",
+      "sessionID": "sess_000104",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_018",
+      "spaceID": "space_21",
+      "connectionTime": "2020-10-04T23:52:52+00:00",
+      "disconnectTime": "2020-10-05T07:07:01+00:00",
+      "doneChargingTime": "2020-10-05T02:58:27+00:00",
+      "kWhDelivered": 11.57,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_29",
+      "userInputs": [
+        {
+          "kWhRequested": 13.41,
+          "minutesAvailable": 434,
+          "requestedDeparture": "2020-10-05T07:07:01+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0105",
+      "sessionID": "sess_000105",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_002",
+      "spaceID": "space_20",
+      "connectionTime": "2020-10-23T19:34:14+00:00",
+      "disconnectTime": "2020-10-24T02:35:20+00:00",
+      "doneChargingTime": "2020-10-23T20:42:44+00:00",
+      "kWhDelivered": 0.67,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_15",
+      "userInputs": [
+        {
+          "kWhRequested": 0.63,
+          "minutesAvailable": 421,
+          "requestedDeparture": "2020-10-24T02:35:20+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0106",
+      "sessionID": "sess_000106",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_018",
+      "spaceID": "space_27",
+      "connectionTime": "2020-11-01T05:01:37+00:00",
+      "disconnectTime": "2020-11-01T10:22:58+00:00",
+      "doneChargingTime": "2020-11-01T08:46:58+00:00",
+      "kWhDelivered": 16.6,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_20",
+      "userInputs": [
+        {
+          "kWhRequested": 20.82,
+          "minutesAvailable": 321,
+          "requestedDeparture": "2020-11-01T10:22:58+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0107",
+      "sessionID": "sess_000107",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_012",
+      "spaceID": "space_14",
+      "connectionTime": "2020-11-10T23:40:40+00:00",
+      "disconnectTime": "2020-11-11T06:24:38+00:00",
+      "doneChargingTime": "2020-11-11T05:20:33+00:00",
+      "kWhDelivered": 10.6,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_31",
+      "userInputs": [
+        {
+          "kWhRequested": 13.17,
+          "minutesAvailable": 403,
+          "requestedDeparture": "2020-11-11T06:24:38+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0108",
+      "sessionID": "sess_000108",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_013",
+      "spaceID": "space_18",
+      "connectionTime": "2020-10-30T03:22:08+00:00",
+      "disconnectTime": "2020-10-30T09:29:48+00:00",
+      "doneChargingTime": "2020-10-30T09:14:49+00:00",
+      "kWhDelivered": 13.56,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 12.87,
+          "minutesAvailable": 367,
+          "requestedDeparture": "2020-10-30T09:29:48+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0109",
+      "sessionID": "sess_000109",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_001",
+      "spaceID": "space_4",
+      "connectionTime": "2020-10-03T09:01:52+00:00",
+      "disconnectTime": "2020-10-03T16:09:52+00:00",
+      "doneChargingTime": "2020-10-03T13:03:37+00:00",
+      "kWhDelivered": 14.58,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_32",
+      "userInputs": [
+        {
+          "kWhRequested": 18.89,
+          "minutesAvailable": 428,
+          "requestedDeparture": "2020-10-03T16:09:52+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0110",
+      "sessionID": "sess_000110",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_008",
+      "spaceID": "space_22",
+      "connectionTime": "2020-10-01T03:17:23+00:00",
+      "disconnectTime": "2020-10-01T11:50:35+00:00",
+      "doneChargingTime": "2020-10-01T06:50:16+00:00",
+      "kWhDelivered": 12.63,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_77",
+      "userInputs": [
+        {
+          "kWhRequested": 11.38,
+          "minutesAvailable": 513,
+          "requestedDeparture": "2020-10-01T11:50:35+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0111",
+      "sessionID": "sess_000111",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_001",
+      "spaceID": "space_9",
+      "connectionTime": "2020-10-07T02:19:13+00:00",
+      "disconnectTime": "2020-10-07T08:24:43+00:00",
+      "doneChargingTime": "2020-10-07T07:12:43+00:00",
+      "kWhDelivered": 4.59,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 5.58,
+          "minutesAvailable": 365,
+          "requestedDeparture": "2020-10-07T08:24:43+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0112",
+      "sessionID": "sess_000112",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_014",
+      "spaceID": "space_34",
+      "connectionTime": "2020-11-20T15:32:36+00:00",
+      "disconnectTime": "2020-11-20T19:47:43+00:00",
+      "doneChargingTime": "2020-11-20T16:41:49+00:00",
+      "kWhDelivered": 0.72,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 0.67,
+          "minutesAvailable": 255,
+          "requestedDeparture": "2020-11-20T19:47:43+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0113",
+      "sessionID": "sess_000113",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_020",
+      "spaceID": "space_3",
+      "connectionTime": "2020-10-29T15:01:43+00:00",
+      "disconnectTime": "2020-10-29T20:53:28+00:00",
+      "doneChargingTime": "2020-10-29T16:06:48+00:00",
+      "kWhDelivered": 3.37,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_67",
+      "userInputs": [
+        {
+          "kWhRequested": 3.44,
+          "minutesAvailable": 351,
+          "requestedDeparture": "2020-10-29T20:53:28+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0114",
+      "sessionID": "sess_000114",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_004",
+      "spaceID": "space_32",
+      "connectionTime": "2020-09-30T09:09:00+00:00",
+      "disconnectTime": "2020-09-30T19:08:16+00:00",
+      "doneChargingTime": "2020-09-30T14:18:36+00:00",
+      "kWhDelivered": 13.82,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_57",
+      "userInputs": [
+        {
+          "kWhRequested": 12.84,
+          "minutesAvailable": 599,
+          "requestedDeparture": "2020-09-30T19:08:16+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0115",
+      "sessionID": "sess_000115",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_019",
+      "spaceID": "space_36",
+      "connectionTime": "2020-10-25T17:59:29+00:00",
+      "disconnectTime": "2020-10-26T00:39:42+00:00",
+      "doneChargingTime": "2020-10-25T18:51:09+00:00",
+      "kWhDelivered": 1.59,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_49",
+      "userInputs": [
+        {
+          "kWhRequested": 2.06,
+          "minutesAvailable": 400,
+          "requestedDeparture": "2020-10-26T00:39:42+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0116",
+      "sessionID": "sess_000116",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_004",
+      "spaceID": "space_36",
+      "connectionTime": "2020-11-07T12:39:00+00:00",
+      "disconnectTime": "2020-11-07T18:26:49+00:00",
+      "doneChargingTime": "2020-11-07T15:25:43+00:00",
+      "kWhDelivered": 13.05,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_28",
+      "userInputs": [
+        {
+          "kWhRequested": 13.99,
+          "minutesAvailable": 347,
+          "requestedDeparture": "2020-11-07T18:26:49+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0117",
+      "sessionID": "sess_000117",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_004",
+      "spaceID": "space_21",
+      "connectionTime": "2020-11-03T15:40:19+00:00",
+      "disconnectTime": "2020-11-03T20:03:10+00:00",
+      "doneChargingTime": "2020-11-03T17:55:54+00:00",
+      "kWhDelivered": 5.92,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_33",
+      "userInputs": [
+        {
+          "kWhRequested": 6.21,
+          "minutesAvailable": 262,
+          "requestedDeparture": "2020-11-03T20:03:10+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0118",
+      "sessionID": "sess_000118",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_004",
+      "spaceID": "space_24",
+      "connectionTime": "2020-11-09T12:32:27+00:00",
+      "disconnectTime": "2020-11-09T14:36:41+00:00",
+      "doneChargingTime": "2020-11-09T14:20:50+00:00",
+      "kWhDelivered": 1.53,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_72",
+      "userInputs": [
+        {
+          "kWhRequested": 1.41,
+          "minutesAvailable": 124,
+          "requestedDeparture": "2020-11-09T14:36:41+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0119",
+      "sessionID": "sess_000119",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_014",
+      "spaceID": "space_4",
+      "connectionTime": "2020-10-06T08:14:10+00:00",
+      "disconnectTime": "2020-10-06T13:13:40+00:00",
+      "doneChargingTime": "2020-10-06T12:39:36+00:00",
+      "kWhDelivered": 24.37,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_77",
+      "userInputs": [
+        {
+          "kWhRequested": 24.98,
+          "minutesAvailable": 299,
+          "requestedDeparture": "2020-10-06T13:13:40+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0120",
+      "sessionID": "sess_000120",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_004",
+      "spaceID": "space_23",
+      "connectionTime": "2020-11-19T14:03:51+00:00",
+      "disconnectTime": "2020-11-19T19:52:37+00:00",
+      "doneChargingTime": "2020-11-19T15:23:10+00:00",
+      "kWhDelivered": 3.95,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_48",
+      "userInputs": [
+        {
+          "kWhRequested": 3.74,
+          "minutesAvailable": 348,
+          "requestedDeparture": "2020-11-19T19:52:37+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0121",
+      "sessionID": "sess_000121",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_020",
+      "spaceID": "space_40",
+      "connectionTime": "2020-11-19T05:09:59+00:00",
+      "disconnectTime": "2020-11-19T08:35:19+00:00",
+      "doneChargingTime": "2020-11-19T06:55:13+00:00",
+      "kWhDelivered": 6.0,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_72",
+      "userInputs": [
+        {
+          "kWhRequested": 5.46,
+          "minutesAvailable": 205,
+          "requestedDeparture": "2020-11-19T08:35:19+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0122",
+      "sessionID": "sess_000122",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_011",
+      "spaceID": "space_23",
+      "connectionTime": "2020-09-27T06:52:56+00:00",
+      "disconnectTime": "2020-09-27T09:54:56+00:00",
+      "doneChargingTime": "2020-09-27T09:09:45+00:00",
+      "kWhDelivered": 4.64,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 5.79,
+          "minutesAvailable": 182,
+          "requestedDeparture": "2020-09-27T09:54:56+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0123",
+      "sessionID": "sess_000123",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_017",
+      "spaceID": "space_14",
+      "connectionTime": "2020-10-01T05:33:44+00:00",
+      "disconnectTime": "2020-10-01T08:16:05+00:00",
+      "doneChargingTime": "2020-10-01T07:27:32+00:00",
+      "kWhDelivered": 0.95,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_59",
+      "userInputs": [
+        {
+          "kWhRequested": 0.98,
+          "minutesAvailable": 162,
+          "requestedDeparture": "2020-10-01T08:16:05+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0124",
+      "sessionID": "sess_000124",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_003",
+      "spaceID": "space_4",
+      "connectionTime": "2020-10-24T17:35:03+00:00",
+      "disconnectTime": "2020-10-25T01:13:03+00:00",
+      "doneChargingTime": "2020-10-24T22:21:24+00:00",
+      "kWhDelivered": 16.49,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 19.82,
+          "minutesAvailable": 458,
+          "requestedDeparture": "2020-10-25T01:13:03+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0125",
+      "sessionID": "sess_000125",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_015",
+      "spaceID": "space_27",
+      "connectionTime": "2020-10-02T09:30:55+00:00",
+      "disconnectTime": "2020-10-02T13:19:41+00:00",
+      "doneChargingTime": "2020-10-02T12:12:29+00:00",
+      "kWhDelivered": 8.09,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_66",
+      "userInputs": [
+        {
+          "kWhRequested": 7.65,
+          "minutesAvailable": 228,
+          "requestedDeparture": "2020-10-02T13:19:41+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0126",
+      "sessionID": "sess_000126",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_010",
+      "spaceID": "space_3",
+      "connectionTime": "2020-10-05T05:48:30+00:00",
+      "disconnectTime": "2020-10-05T09:42:57+00:00",
+      "doneChargingTime": "2020-10-05T08:37:13+00:00",
+      "kWhDelivered": 8.46,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_77",
+      "userInputs": [
+        {
+          "kWhRequested": 7.8,
+          "minutesAvailable": 234,
+          "requestedDeparture": "2020-10-05T09:42:57+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0127",
+      "sessionID": "sess_000127",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_010",
+      "spaceID": "space_21",
+      "connectionTime": "2020-10-23T17:46:28+00:00",
+      "disconnectTime": "2020-10-24T03:18:34+00:00",
+      "doneChargingTime": "2020-10-23T22:29:41+00:00",
+      "kWhDelivered": 21.41,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 23.53,
+          "minutesAvailable": 572,
+          "requestedDeparture": "2020-10-24T03:18:34+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0128",
+      "sessionID": "sess_000128",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_018",
+      "spaceID": "space_23",
+      "connectionTime": "2020-10-11T12:48:54+00:00",
+      "disconnectTime": "2020-10-11T15:24:47+00:00",
+      "doneChargingTime": "2020-10-11T14:25:56+00:00",
+      "kWhDelivered": 2.59,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 3.22,
+          "minutesAvailable": 155,
+          "requestedDeparture": "2020-10-11T15:24:47+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0129",
+      "sessionID": "sess_000129",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_019",
+      "spaceID": "space_28",
+      "connectionTime": "2020-11-05T19:52:55+00:00",
+      "disconnectTime": "2020-11-05T21:32:28+00:00",
+      "doneChargingTime": "2020-11-05T21:26:59+00:00",
+      "kWhDelivered": 7.96,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_54",
+      "userInputs": [
+        {
+          "kWhRequested": 8.09,
+          "minutesAvailable": 99,
+          "requestedDeparture": "2020-11-05T21:32:28+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0130",
+      "sessionID": "sess_000130",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_015",
+      "spaceID": "space_24",
+      "connectionTime": "2020-09-26T12:00:57+00:00",
+      "disconnectTime": "2020-09-26T21:43:42+00:00",
+      "doneChargingTime": "2020-09-26T13:27:40+00:00",
+      "kWhDelivered": 8.01,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 9.91,
+          "minutesAvailable": 582,
+          "requestedDeparture": "2020-09-26T21:43:42+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0131",
+      "sessionID": "sess_000131",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_010",
+      "spaceID": "space_22",
+      "connectionTime": "2020-11-05T18:36:59+00:00",
+      "disconnectTime": "2020-11-06T01:07:18+00:00",
+      "doneChargingTime": "2020-11-05T21:59:53+00:00",
+      "kWhDelivered": 8.49,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_22",
+      "userInputs": [
+        {
+          "kWhRequested": 7.9,
+          "minutesAvailable": 390,
+          "requestedDeparture": "2020-11-06T01:07:18+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0132",
+      "sessionID": "sess_000132",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_005",
+      "spaceID": "space_16",
+      "connectionTime": "2020-11-14T23:48:55+00:00",
+      "disconnectTime": "2020-11-15T05:38:59+00:00",
+      "doneChargingTime": "2020-11-15T05:08:52+00:00",
+      "kWhDelivered": 12.02,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 12.05,
+          "minutesAvailable": 350,
+          "requestedDeparture": "2020-11-15T05:38:59+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0133",
+      "sessionID": "sess_000133",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_016",
+      "spaceID": "space_30",
+      "connectionTime": "2020-11-21T23:06:28+00:00",
+      "disconnectTime": "2020-11-22T01:54:25+00:00",
+      "doneChargingTime": "2020-11-22T01:21:12+00:00",
+      "kWhDelivered": 1.68,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_75",
+      "userInputs": [
+        {
+          "kWhRequested": 1.81,
+          "minutesAvailable": 167,
+          "requestedDeparture": "2020-11-22T01:54:25+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0134",
+      "sessionID": "sess_000134",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_010",
+      "spaceID": "space_18",
+      "connectionTime": "2020-10-25T04:04:25+00:00",
+      "disconnectTime": "2020-10-25T06:51:24+00:00",
+      "doneChargingTime": "2020-10-25T04:43:46+00:00",
+      "kWhDelivered": 1.81,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_46",
+      "userInputs": [
+        {
+          "kWhRequested": 2.0,
+          "minutesAvailable": 166,
+          "requestedDeparture": "2020-10-25T06:51:24+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0135",
+      "sessionID": "sess_000135",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_003",
+      "spaceID": "space_6",
+      "connectionTime": "2020-11-08T07:21:16+00:00",
+      "disconnectTime": "2020-11-08T12:41:44+00:00",
+      "doneChargingTime": "2020-11-08T08:07:47+00:00",
+      "kWhDelivered": 3.81,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_65",
+      "userInputs": [
+        {
+          "kWhRequested": 4.01,
+          "minutesAvailable": 320,
+          "requestedDeparture": "2020-11-08T12:41:44+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0136",
+      "sessionID": "sess_000136",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_020",
+      "spaceID": "space_31",
+      "connectionTime": "2020-11-07T03:22:19+00:00",
+      "disconnectTime": "2020-11-07T12:35:55+00:00",
+      "doneChargingTime": "2020-11-07T07:00:57+00:00",
+      "kWhDelivered": 4.99,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_8",
+      "userInputs": [
+        {
+          "kWhRequested": 5.39,
+          "minutesAvailable": 553,
+          "requestedDeparture": "2020-11-07T12:35:55+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0137",
+      "sessionID": "sess_000137",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_015",
+      "spaceID": "space_29",
+      "connectionTime": "2020-10-02T15:55:04+00:00",
+      "disconnectTime": "2020-10-02T21:42:23+00:00",
+      "doneChargingTime": "2020-10-02T17:19:49+00:00",
+      "kWhDelivered": 2.4,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_79",
+      "userInputs": [
+        {
+          "kWhRequested": 2.31,
+          "minutesAvailable": 347,
+          "requestedDeparture": "2020-10-02T21:42:23+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0138",
+      "sessionID": "sess_000138",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_002",
+      "spaceID": "space_22",
+      "connectionTime": "2020-10-21T22:36:23+00:00",
+      "disconnectTime": "2020-10-22T03:23:57+00:00",
+      "doneChargingTime": "2020-10-22T02:25:52+00:00",
+      "kWhDelivered": 15.56,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 14.59,
+          "minutesAvailable": 287,
+          "requestedDeparture": "2020-10-22T03:23:57+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0139",
+      "sessionID": "sess_000139",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_020",
+      "spaceID": "space_10",
+      "connectionTime": "2020-10-22T01:31:37+00:00",
+      "disconnectTime": "2020-10-22T05:10:08+00:00",
+      "doneChargingTime": "2020-10-22T04:42:09+00:00",
+      "kWhDelivered": 17.9,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_75",
+      "userInputs": [
+        {
+          "kWhRequested": 20.86,
+          "minutesAvailable": 218,
+          "requestedDeparture": "2020-10-22T05:10:08+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0140",
+      "sessionID": "sess_000140",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_020",
+      "spaceID": "space_6",
+      "connectionTime": "2020-10-24T14:18:32+00:00",
+      "disconnectTime": "2020-10-25T00:02:03+00:00",
+      "doneChargingTime": "2020-10-24T18:39:01+00:00",
+      "kWhDelivered": 10.81,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_49",
+      "userInputs": [
+        {
+          "kWhRequested": 12.51,
+          "minutesAvailable": 583,
+          "requestedDeparture": "2020-10-25T00:02:03+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0141",
+      "sessionID": "sess_000141",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_017",
+      "spaceID": "space_6",
+      "connectionTime": "2020-10-06T21:11:51+00:00",
+      "disconnectTime": "2020-10-07T04:23:36+00:00",
+      "doneChargingTime": "2020-10-07T02:15:24+00:00",
+      "kWhDelivered": 22.24,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_55",
+      "userInputs": [
+        {
+          "kWhRequested": 24.54,
+          "minutesAvailable": 431,
+          "requestedDeparture": "2020-10-07T04:23:36+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0142",
+      "sessionID": "sess_000142",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_016",
+      "spaceID": "space_13",
+      "connectionTime": "2020-10-29T16:19:49+00:00",
+      "disconnectTime": "2020-10-29T20:27:20+00:00",
+      "doneChargingTime": "2020-10-29T20:16:42+00:00",
+      "kWhDelivered": 8.74,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_18",
+      "userInputs": [
+        {
+          "kWhRequested": 8.41,
+          "minutesAvailable": 247,
+          "requestedDeparture": "2020-10-29T20:27:20+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0143",
+      "sessionID": "sess_000143",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_017",
+      "spaceID": "space_3",
+      "connectionTime": "2020-10-04T07:05:30+00:00",
+      "disconnectTime": "2020-10-04T12:54:25+00:00",
+      "doneChargingTime": "2020-10-04T10:27:38+00:00",
+      "kWhDelivered": 14.81,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_80",
+      "userInputs": [
+        {
+          "kWhRequested": 14.11,
+          "minutesAvailable": 348,
+          "requestedDeparture": "2020-10-04T12:54:25+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0144",
+      "sessionID": "sess_000144",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_006",
+      "spaceID": "space_29",
+      "connectionTime": "2020-10-09T10:51:05+00:00",
+      "disconnectTime": "2020-10-09T13:43:49+00:00",
+      "doneChargingTime": "2020-10-09T13:19:45+00:00",
+      "kWhDelivered": 11.33,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 11.85,
+          "minutesAvailable": 172,
+          "requestedDeparture": "2020-10-09T13:43:49+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0145",
+      "sessionID": "sess_000145",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_008",
+      "spaceID": "space_35",
+      "connectionTime": "2020-11-06T14:28:28+00:00",
+      "disconnectTime": "2020-11-06T21:09:52+00:00",
+      "doneChargingTime": "2020-11-06T19:06:45+00:00",
+      "kWhDelivered": 21.54,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_61",
+      "userInputs": [
+        {
+          "kWhRequested": 27.17,
+          "minutesAvailable": 401,
+          "requestedDeparture": "2020-11-06T21:09:52+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0146",
+      "sessionID": "sess_000146",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_010",
+      "spaceID": "space_25",
+      "connectionTime": "2020-10-30T04:32:53+00:00",
+      "disconnectTime": "2020-10-30T11:48:49+00:00",
+      "doneChargingTime": "2020-10-30T08:11:07+00:00",
+      "kWhDelivered": 10.03,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_54",
+      "userInputs": [
+        {
+          "kWhRequested": 12.9,
+          "minutesAvailable": 435,
+          "requestedDeparture": "2020-10-30T11:48:49+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0147",
+      "sessionID": "sess_000147",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_012",
+      "spaceID": "space_36",
+      "connectionTime": "2020-11-22T04:23:04+00:00",
+      "disconnectTime": "2020-11-22T07:03:38+00:00",
+      "doneChargingTime": "2020-11-22T05:25:42+00:00",
+      "kWhDelivered": 4.03,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_67",
+      "userInputs": [
+        {
+          "kWhRequested": 5.0,
+          "minutesAvailable": 160,
+          "requestedDeparture": "2020-11-22T07:03:38+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0148",
+      "sessionID": "sess_000148",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_005",
+      "spaceID": "space_28",
+      "connectionTime": "2020-10-02T14:51:35+00:00",
+      "disconnectTime": "2020-10-02T22:50:46+00:00",
+      "doneChargingTime": "2020-10-02T16:51:36+00:00",
+      "kWhDelivered": 10.63,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 13.44,
+          "minutesAvailable": 479,
+          "requestedDeparture": "2020-10-02T22:50:46+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0149",
+      "sessionID": "sess_000149",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_012",
+      "spaceID": "space_16",
+      "connectionTime": "2020-10-28T10:00:32+00:00",
+      "disconnectTime": "2020-10-28T19:25:04+00:00",
+      "doneChargingTime": "2020-10-28T12:47:26+00:00",
+      "kWhDelivered": 6.99,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_11",
+      "userInputs": [
+        {
+          "kWhRequested": 7.34,
+          "minutesAvailable": 564,
+          "requestedDeparture": "2020-10-28T19:25:04+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0150",
+      "sessionID": "sess_000150",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_005",
+      "spaceID": "space_9",
+      "connectionTime": "2020-10-25T10:00:22+00:00",
+      "disconnectTime": "2020-10-25T19:25:05+00:00",
+      "doneChargingTime": "2020-10-25T15:07:17+00:00",
+      "kWhDelivered": 19.99,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 25.33,
+          "minutesAvailable": 564,
+          "requestedDeparture": "2020-10-25T19:25:05+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0151",
+      "sessionID": "sess_000151",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_003",
+      "spaceID": "space_2",
+      "connectionTime": "2020-10-07T22:49:37+00:00",
+      "disconnectTime": "2020-10-08T06:46:37+00:00",
+      "doneChargingTime": "2020-10-08T01:54:25+00:00",
+      "kWhDelivered": 11.45,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_20",
+      "userInputs": [
+        {
+          "kWhRequested": 12.82,
+          "minutesAvailable": 477,
+          "requestedDeparture": "2020-10-08T06:46:37+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0152",
+      "sessionID": "sess_000152",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_008",
+      "spaceID": "space_27",
+      "connectionTime": "2020-10-05T06:30:02+00:00",
+      "disconnectTime": "2020-10-05T14:35:52+00:00",
+      "doneChargingTime": "2020-10-05T08:18:27+00:00",
+      "kWhDelivered": 1.81,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_80",
+      "userInputs": [
+        {
+          "kWhRequested": 1.96,
+          "minutesAvailable": 485,
+          "requestedDeparture": "2020-10-05T14:35:52+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0153",
+      "sessionID": "sess_000153",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_008",
+      "spaceID": "space_10",
+      "connectionTime": "2020-11-12T00:06:11+00:00",
+      "disconnectTime": "2020-11-12T06:40:31+00:00",
+      "doneChargingTime": "2020-11-12T00:41:36+00:00",
+      "kWhDelivered": 1.87,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_1",
+      "userInputs": [
+        {
+          "kWhRequested": 2.14,
+          "minutesAvailable": 394,
+          "requestedDeparture": "2020-11-12T06:40:31+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0154",
+      "sessionID": "sess_000154",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_012",
+      "spaceID": "space_5",
+      "connectionTime": "2020-11-18T21:09:34+00:00",
+      "disconnectTime": "2020-11-19T02:12:00+00:00",
+      "doneChargingTime": "2020-11-19T00:40:34+00:00",
+      "kWhDelivered": 2.83,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_70",
+      "userInputs": [
+        {
+          "kWhRequested": 3.12,
+          "minutesAvailable": 302,
+          "requestedDeparture": "2020-11-19T02:12:00+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0155",
+      "sessionID": "sess_000155",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_012",
+      "spaceID": "space_17",
+      "connectionTime": "2020-11-01T09:14:23+00:00",
+      "disconnectTime": "2020-11-01T18:09:46+00:00",
+      "doneChargingTime": "2020-11-01T09:58:44+00:00",
+      "kWhDelivered": 1.82,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_46",
+      "userInputs": [
+        {
+          "kWhRequested": 2.21,
+          "minutesAvailable": 535,
+          "requestedDeparture": "2020-11-01T18:09:46+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0156",
+      "sessionID": "sess_000156",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_011",
+      "spaceID": "space_9",
+      "connectionTime": "2020-10-17T21:16:50+00:00",
+      "disconnectTime": "2020-10-18T05:00:37+00:00",
+      "doneChargingTime": "2020-10-18T01:14:09+00:00",
+      "kWhDelivered": 18.1,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 20.24,
+          "minutesAvailable": 463,
+          "requestedDeparture": "2020-10-18T05:00:37+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0157",
+      "sessionID": "sess_000157",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_005",
+      "spaceID": "space_5",
+      "connectionTime": "2020-11-08T14:03:59+00:00",
+      "disconnectTime": "2020-11-08T23:54:12+00:00",
+      "doneChargingTime": "2020-11-08T17:11:53+00:00",
+      "kWhDelivered": 4.18,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_59",
+      "userInputs": [
+        {
+          "kWhRequested": 3.82,
+          "minutesAvailable": 590,
+          "requestedDeparture": "2020-11-08T23:54:12+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0158",
+      "sessionID": "sess_000158",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_010",
+      "spaceID": "space_33",
+      "connectionTime": "2020-09-28T17:29:33+00:00",
+      "disconnectTime": "2020-09-29T01:43:00+00:00",
+      "doneChargingTime": "2020-09-28T22:51:51+00:00",
+      "kWhDelivered": 11.11,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_70",
+      "userInputs": [
+        {
+          "kWhRequested": 12.1,
+          "minutesAvailable": 493,
+          "requestedDeparture": "2020-09-29T01:43:00+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0159",
+      "sessionID": "sess_000159",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_011",
+      "spaceID": "space_18",
+      "connectionTime": "2020-10-13T00:43:11+00:00",
+      "disconnectTime": "2020-10-13T04:39:05+00:00",
+      "doneChargingTime": "2020-10-13T04:10:42+00:00",
+      "kWhDelivered": 2.06,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 2.16,
+          "minutesAvailable": 235,
+          "requestedDeparture": "2020-10-13T04:39:05+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0160",
+      "sessionID": "sess_000160",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_016",
+      "spaceID": "space_32",
+      "connectionTime": "2020-11-06T04:04:38+00:00",
+      "disconnectTime": "2020-11-06T13:10:53+00:00",
+      "doneChargingTime": "2020-11-06T06:42:13+00:00",
+      "kWhDelivered": 14.94,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_67",
+      "userInputs": [
+        {
+          "kWhRequested": 15.04,
+          "minutesAvailable": 546,
+          "requestedDeparture": "2020-11-06T13:10:53+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0161",
+      "sessionID": "sess_000161",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_018",
+      "spaceID": "space_19",
+      "connectionTime": "2020-11-04T16:34:21+00:00",
+      "disconnectTime": "2020-11-04T18:44:36+00:00",
+      "doneChargingTime": "2020-11-04T18:04:44+00:00",
+      "kWhDelivered": 7.32,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_11",
+      "userInputs": [
+        {
+          "kWhRequested": 7.55,
+          "minutesAvailable": 130,
+          "requestedDeparture": "2020-11-04T18:44:36+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0162",
+      "sessionID": "sess_000162",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_015",
+      "spaceID": "space_23",
+      "connectionTime": "2020-10-24T05:36:13+00:00",
+      "disconnectTime": "2020-10-24T10:53:38+00:00",
+      "doneChargingTime": "2020-10-24T09:32:29+00:00",
+      "kWhDelivered": 4.92,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_46",
+      "userInputs": [
+        {
+          "kWhRequested": 5.64,
+          "minutesAvailable": 317,
+          "requestedDeparture": "2020-10-24T10:53:38+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0163",
+      "sessionID": "sess_000163",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_013",
+      "spaceID": "space_24",
+      "connectionTime": "2020-10-21T03:10:37+00:00",
+      "disconnectTime": "2020-10-21T10:06:44+00:00",
+      "doneChargingTime": "2020-10-21T08:01:48+00:00",
+      "kWhDelivered": 3.15,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_21",
+      "userInputs": [
+        {
+          "kWhRequested": 4.04,
+          "minutesAvailable": 416,
+          "requestedDeparture": "2020-10-21T10:06:44+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0164",
+      "sessionID": "sess_000164",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_008",
+      "spaceID": "space_24",
+      "connectionTime": "2020-11-22T11:09:50+00:00",
+      "disconnectTime": "2020-11-22T18:25:39+00:00",
+      "doneChargingTime": "2020-11-22T14:04:25+00:00",
+      "kWhDelivered": 2.99,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_73",
+      "userInputs": [
+        {
+          "kWhRequested": 2.73,
+          "minutesAvailable": 435,
+          "requestedDeparture": "2020-11-22T18:25:39+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0165",
+      "sessionID": "sess_000165",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_019",
+      "spaceID": "space_9",
+      "connectionTime": "2020-11-07T03:48:44+00:00",
+      "disconnectTime": "2020-11-07T13:22:37+00:00",
+      "doneChargingTime": "2020-11-07T06:21:29+00:00",
+      "kWhDelivered": 11.53,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_51",
+      "userInputs": [
+        {
+          "kWhRequested": 11.83,
+          "minutesAvailable": 573,
+          "requestedDeparture": "2020-11-07T13:22:37+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0166",
+      "sessionID": "sess_000166",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_017",
+      "spaceID": "space_25",
+      "connectionTime": "2020-10-18T17:03:14+00:00",
+      "disconnectTime": "2020-10-19T02:43:05+00:00",
+      "doneChargingTime": "2020-10-18T17:41:47+00:00",
+      "kWhDelivered": 0.87,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_16",
+      "userInputs": [
+        {
+          "kWhRequested": 0.87,
+          "minutesAvailable": 579,
+          "requestedDeparture": "2020-10-19T02:43:05+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0167",
+      "sessionID": "sess_000167",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_016",
+      "spaceID": "space_13",
+      "connectionTime": "2020-11-06T19:18:30+00:00",
+      "disconnectTime": "2020-11-06T22:37:55+00:00",
+      "doneChargingTime": "2020-11-06T21:32:10+00:00",
+      "kWhDelivered": 9.25,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 11.48,
+          "minutesAvailable": 199,
+          "requestedDeparture": "2020-11-06T22:37:55+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0168",
+      "sessionID": "sess_000168",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_011",
+      "spaceID": "space_23",
+      "connectionTime": "2020-10-11T05:44:06+00:00",
+      "disconnectTime": "2020-10-11T14:52:25+00:00",
+      "doneChargingTime": "2020-10-11T08:40:59+00:00",
+      "kWhDelivered": 2.41,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_71",
+      "userInputs": [
+        {
+          "kWhRequested": 2.69,
+          "minutesAvailable": 548,
+          "requestedDeparture": "2020-10-11T14:52:25+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0169",
+      "sessionID": "sess_000169",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_012",
+      "spaceID": "space_33",
+      "connectionTime": "2020-10-09T18:25:49+00:00",
+      "disconnectTime": "2020-10-10T01:58:50+00:00",
+      "doneChargingTime": "2020-10-10T00:01:50+00:00",
+      "kWhDelivered": 21.51,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_26",
+      "userInputs": [
+        {
+          "kWhRequested": 26.17,
+          "minutesAvailable": 453,
+          "requestedDeparture": "2020-10-10T01:58:50+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0170",
+      "sessionID": "sess_000170",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_018",
+      "spaceID": "space_9",
+      "connectionTime": "2020-11-11T10:34:16+00:00",
+      "disconnectTime": "2020-11-11T12:17:40+00:00",
+      "doneChargingTime": "2020-11-11T11:44:56+00:00",
+      "kWhDelivered": 2.78,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_12",
+      "userInputs": [
+        {
+          "kWhRequested": 2.58,
+          "minutesAvailable": 103,
+          "requestedDeparture": "2020-11-11T12:17:40+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0171",
+      "sessionID": "sess_000171",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_003",
+      "spaceID": "space_9",
+      "connectionTime": "2020-11-09T22:47:13+00:00",
+      "disconnectTime": "2020-11-10T04:45:19+00:00",
+      "doneChargingTime": "2020-11-10T03:29:34+00:00",
+      "kWhDelivered": 22.88,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_10",
+      "userInputs": [
+        {
+          "kWhRequested": 24.71,
+          "minutesAvailable": 358,
+          "requestedDeparture": "2020-11-10T04:45:19+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0172",
+      "sessionID": "sess_000172",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_006",
+      "spaceID": "space_9",
+      "connectionTime": "2020-10-06T22:27:28+00:00",
+      "disconnectTime": "2020-10-07T07:25:13+00:00",
+      "doneChargingTime": "2020-10-07T03:14:57+00:00",
+      "kWhDelivered": 18.46,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_8",
+      "userInputs": [
+        {
+          "kWhRequested": 22.75,
+          "minutesAvailable": 537,
+          "requestedDeparture": "2020-10-07T07:25:13+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0173",
+      "sessionID": "sess_000173",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_012",
+      "spaceID": "space_34",
+      "connectionTime": "2020-10-24T00:04:41+00:00",
+      "disconnectTime": "2020-10-24T02:58:39+00:00",
+      "doneChargingTime": "2020-10-24T01:21:08+00:00",
+      "kWhDelivered": 5.4,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_11",
+      "userInputs": [
+        {
+          "kWhRequested": 5.4,
+          "minutesAvailable": 173,
+          "requestedDeparture": "2020-10-24T02:58:39+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0174",
+      "sessionID": "sess_000174",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_006",
+      "spaceID": "space_38",
+      "connectionTime": "2020-10-06T15:05:04+00:00",
+      "disconnectTime": "2020-10-06T21:53:49+00:00",
+      "doneChargingTime": "2020-10-06T18:57:49+00:00",
+      "kWhDelivered": 3.29,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_20",
+      "userInputs": [
+        {
+          "kWhRequested": 3.19,
+          "minutesAvailable": 408,
+          "requestedDeparture": "2020-10-06T21:53:49+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0175",
+      "sessionID": "sess_000175",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_019",
+      "spaceID": "space_17",
+      "connectionTime": "2020-11-18T04:44:30+00:00",
+      "disconnectTime": "2020-11-18T06:35:30+00:00",
+      "doneChargingTime": "2020-11-18T06:24:28+00:00",
+      "kWhDelivered": 1.3,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_74",
+      "userInputs": [
+        {
+          "kWhRequested": 1.39,
+          "minutesAvailable": 111,
+          "requestedDeparture": "2020-11-18T06:35:30+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0176",
+      "sessionID": "sess_000176",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_010",
+      "spaceID": "space_31",
+      "connectionTime": "2020-11-11T19:55:46+00:00",
+      "disconnectTime": "2020-11-12T04:59:09+00:00",
+      "doneChargingTime": "2020-11-11T23:25:48+00:00",
+      "kWhDelivered": 13.53,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_52",
+      "userInputs": [
+        {
+          "kWhRequested": 13.79,
+          "minutesAvailable": 543,
+          "requestedDeparture": "2020-11-12T04:59:09+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0177",
+      "sessionID": "sess_000177",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_011",
+      "spaceID": "space_39",
+      "connectionTime": "2020-09-30T07:01:26+00:00",
+      "disconnectTime": "2020-09-30T09:52:03+00:00",
+      "doneChargingTime": "2020-09-30T08:29:52+00:00",
+      "kWhDelivered": 4.26,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 5.3,
+          "minutesAvailable": 170,
+          "requestedDeparture": "2020-09-30T09:52:03+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0178",
+      "sessionID": "sess_000178",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_018",
+      "spaceID": "space_7",
+      "connectionTime": "2020-10-28T00:11:18+00:00",
+      "disconnectTime": "2020-10-28T09:58:44+00:00",
+      "doneChargingTime": "2020-10-28T01:24:27+00:00",
+      "kWhDelivered": 2.89,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_60",
+      "userInputs": [
+        {
+          "kWhRequested": 2.74,
+          "minutesAvailable": 587,
+          "requestedDeparture": "2020-10-28T09:58:44+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0179",
+      "sessionID": "sess_000179",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_020",
+      "spaceID": "space_27",
+      "connectionTime": "2020-10-18T13:06:34+00:00",
+      "disconnectTime": "2020-10-18T15:48:24+00:00",
+      "doneChargingTime": "2020-10-18T13:43:14+00:00",
+      "kWhDelivered": 3.38,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_21",
+      "userInputs": [
+        {
+          "kWhRequested": 4.14,
+          "minutesAvailable": 161,
+          "requestedDeparture": "2020-10-18T15:48:24+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0180",
+      "sessionID": "sess_000180",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_016",
+      "spaceID": "space_20",
+      "connectionTime": "2020-10-12T21:45:43+00:00",
+      "disconnectTime": "2020-10-13T05:44:54+00:00",
+      "doneChargingTime": "2020-10-13T01:00:08+00:00",
+      "kWhDelivered": 10.25,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_12",
+      "userInputs": [
+        {
+          "kWhRequested": 13.1,
+          "minutesAvailable": 479,
+          "requestedDeparture": "2020-10-13T05:44:54+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0181",
+      "sessionID": "sess_000181",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_016",
+      "spaceID": "space_39",
+      "connectionTime": "2020-10-17T20:21:18+00:00",
+      "disconnectTime": "2020-10-17T23:41:01+00:00",
+      "doneChargingTime": "2020-10-17T21:51:11+00:00",
+      "kWhDelivered": 0.92,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_61",
+      "userInputs": [
+        {
+          "kWhRequested": 0.93,
+          "minutesAvailable": 199,
+          "requestedDeparture": "2020-10-17T23:41:01+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0182",
+      "sessionID": "sess_000182",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_013",
+      "spaceID": "space_24",
+      "connectionTime": "2020-10-04T21:54:10+00:00",
+      "disconnectTime": "2020-10-05T03:03:56+00:00",
+      "doneChargingTime": "2020-10-05T02:31:03+00:00",
+      "kWhDelivered": 20.0,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 18.41,
+          "minutesAvailable": 309,
+          "requestedDeparture": "2020-10-05T03:03:56+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0183",
+      "sessionID": "sess_000183",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_018",
+      "spaceID": "space_18",
+      "connectionTime": "2020-10-29T16:09:29+00:00",
+      "disconnectTime": "2020-10-29T22:21:37+00:00",
+      "doneChargingTime": "2020-10-29T17:03:44+00:00",
+      "kWhDelivered": 2.81,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_80",
+      "userInputs": [
+        {
+          "kWhRequested": 3.29,
+          "minutesAvailable": 372,
+          "requestedDeparture": "2020-10-29T22:21:37+00:00",
+          "WhPerMile": 250
+        }
+      ]
+    },
+    {
+      "_id": "synth_0184",
+      "sessionID": "sess_000184",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_011",
+      "spaceID": "space_36",
+      "connectionTime": "2020-10-06T23:13:26+00:00",
+      "disconnectTime": "2020-10-07T09:00:43+00:00",
+      "doneChargingTime": "2020-10-07T01:53:25+00:00",
+      "kWhDelivered": 12.55,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_19",
+      "userInputs": [
+        {
+          "kWhRequested": 12.29,
+          "minutesAvailable": 587,
+          "requestedDeparture": "2020-10-07T09:00:43+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0185",
+      "sessionID": "sess_000185",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_016",
+      "spaceID": "space_34",
+      "connectionTime": "2020-11-12T00:40:57+00:00",
+      "disconnectTime": "2020-11-12T02:31:28+00:00",
+      "doneChargingTime": "2020-11-12T01:14:05+00:00",
+      "kWhDelivered": 2.35,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_78",
+      "userInputs": [
+        {
+          "kWhRequested": 2.95,
+          "minutesAvailable": 110,
+          "requestedDeparture": "2020-11-12T02:31:28+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0186",
+      "sessionID": "sess_000186",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_020",
+      "spaceID": "space_20",
+      "connectionTime": "2020-10-26T07:37:56+00:00",
+      "disconnectTime": "2020-10-26T17:02:55+00:00",
+      "doneChargingTime": "2020-10-26T09:53:02+00:00",
+      "kWhDelivered": 5.62,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_65",
+      "userInputs": [
+        {
+          "kWhRequested": 6.92,
+          "minutesAvailable": 564,
+          "requestedDeparture": "2020-10-26T17:02:55+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0187",
+      "sessionID": "sess_000187",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_004",
+      "spaceID": "space_27",
+      "connectionTime": "2020-11-18T03:07:30+00:00",
+      "disconnectTime": "2020-11-18T07:10:23+00:00",
+      "doneChargingTime": "2020-11-18T06:31:10+00:00",
+      "kWhDelivered": 8.01,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_4",
+      "userInputs": [
+        {
+          "kWhRequested": 9.12,
+          "minutesAvailable": 242,
+          "requestedDeparture": "2020-11-18T07:10:23+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0188",
+      "sessionID": "sess_000188",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_006",
+      "spaceID": "space_34",
+      "connectionTime": "2020-11-19T15:21:34+00:00",
+      "disconnectTime": "2020-11-19T21:46:09+00:00",
+      "doneChargingTime": "2020-11-19T19:49:37+00:00",
+      "kWhDelivered": 15.83,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_80",
+      "userInputs": [
+        {
+          "kWhRequested": 19.15,
+          "minutesAvailable": 384,
+          "requestedDeparture": "2020-11-19T21:46:09+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0189",
+      "sessionID": "sess_000189",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_004",
+      "spaceID": "space_13",
+      "connectionTime": "2020-10-08T19:45:32+00:00",
+      "disconnectTime": "2020-10-09T04:14:34+00:00",
+      "doneChargingTime": "2020-10-08T21:35:27+00:00",
+      "kWhDelivered": 6.38,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 6.54,
+          "minutesAvailable": 509,
+          "requestedDeparture": "2020-10-09T04:14:34+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0190",
+      "sessionID": "sess_000190",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_016",
+      "spaceID": "space_4",
+      "connectionTime": "2020-11-03T13:41:00+00:00",
+      "disconnectTime": "2020-11-03T21:03:09+00:00",
+      "doneChargingTime": "2020-11-03T16:26:25+00:00",
+      "kWhDelivered": 12.67,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_67",
+      "userInputs": [
+        {
+          "kWhRequested": 12.45,
+          "minutesAvailable": 442,
+          "requestedDeparture": "2020-11-03T21:03:09+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0191",
+      "sessionID": "sess_000191",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_018",
+      "spaceID": "space_22",
+      "connectionTime": "2020-11-09T22:06:06+00:00",
+      "disconnectTime": "2020-11-10T04:04:05+00:00",
+      "doneChargingTime": "2020-11-10T00:19:00+00:00",
+      "kWhDelivered": 2.85,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_34",
+      "userInputs": [
+        {
+          "kWhRequested": 3.26,
+          "minutesAvailable": 357,
+          "requestedDeparture": "2020-11-10T04:04:05+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0192",
+      "sessionID": "sess_000192",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_010",
+      "spaceID": "space_19",
+      "connectionTime": "2020-10-18T09:50:52+00:00",
+      "disconnectTime": "2020-10-18T13:43:09+00:00",
+      "doneChargingTime": "2020-10-18T11:21:15+00:00",
+      "kWhDelivered": 8.3,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_63",
+      "userInputs": [
+        {
+          "kWhRequested": 8.52,
+          "minutesAvailable": 232,
+          "requestedDeparture": "2020-10-18T13:43:09+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    },
+    {
+      "_id": "synth_0193",
+      "sessionID": "sess_000193",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_004",
+      "spaceID": "space_37",
+      "connectionTime": "2020-11-17T21:26:50+00:00",
+      "disconnectTime": "2020-11-18T06:53:01+00:00",
+      "doneChargingTime": "2020-11-18T02:19:19+00:00",
+      "kWhDelivered": 8.96,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_49",
+      "userInputs": [
+        {
+          "kWhRequested": 11.27,
+          "minutesAvailable": 566,
+          "requestedDeparture": "2020-11-18T06:53:01+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0194",
+      "sessionID": "sess_000194",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_010",
+      "spaceID": "space_6",
+      "connectionTime": "2020-10-27T23:38:19+00:00",
+      "disconnectTime": "2020-10-28T09:15:10+00:00",
+      "doneChargingTime": "2020-10-28T04:33:50+00:00",
+      "kWhDelivered": 9.51,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_57",
+      "userInputs": [
+        {
+          "kWhRequested": 11.05,
+          "minutesAvailable": 576,
+          "requestedDeparture": "2020-10-28T09:15:10+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0195",
+      "sessionID": "sess_000195",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_009",
+      "spaceID": "space_9",
+      "connectionTime": "2020-10-15T06:02:31+00:00",
+      "disconnectTime": "2020-10-15T09:15:34+00:00",
+      "doneChargingTime": "2020-10-15T08:00:20+00:00",
+      "kWhDelivered": 10.73,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 12.84,
+          "minutesAvailable": 193,
+          "requestedDeparture": "2020-10-15T09:15:34+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0196",
+      "sessionID": "sess_000196",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_008",
+      "spaceID": "space_4",
+      "connectionTime": "2020-10-18T00:23:05+00:00",
+      "disconnectTime": "2020-10-18T02:18:58+00:00",
+      "doneChargingTime": "2020-10-18T02:10:49+00:00",
+      "kWhDelivered": 2.83,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 2.92,
+          "minutesAvailable": 115,
+          "requestedDeparture": "2020-10-18T02:18:58+00:00",
+          "WhPerMile": 320
+        }
+      ]
+    },
+    {
+      "_id": "synth_0197",
+      "sessionID": "sess_000197",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_006",
+      "spaceID": "space_27",
+      "connectionTime": "2020-10-04T05:42:11+00:00",
+      "disconnectTime": "2020-10-04T12:59:35+00:00",
+      "doneChargingTime": "2020-10-04T06:57:32+00:00",
+      "kWhDelivered": 7.08,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_61",
+      "userInputs": [
+        {
+          "kWhRequested": 7.72,
+          "minutesAvailable": 437,
+          "requestedDeparture": "2020-10-04T12:59:35+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0198",
+      "sessionID": "sess_000198",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_003",
+      "spaceID": "space_37",
+      "connectionTime": "2020-10-22T08:44:46+00:00",
+      "disconnectTime": "2020-10-22T12:58:33+00:00",
+      "doneChargingTime": "2020-10-22T11:39:18+00:00",
+      "kWhDelivered": 15.5,
+      "timezone": "America/Los_Angeles",
+      "userID": "user_5",
+      "userInputs": [
+        {
+          "kWhRequested": 19.61,
+          "minutesAvailable": 253,
+          "requestedDeparture": "2020-10-22T12:58:33+00:00",
+          "WhPerMile": 280
+        }
+      ]
+    },
+    {
+      "_id": "synth_0199",
+      "sessionID": "sess_000199",
+      "siteID": "caltech",
+      "clusterID": "caltech",
+      "stationID": "station_013",
+      "spaceID": "space_32",
+      "connectionTime": "2020-11-04T01:09:33+00:00",
+      "disconnectTime": "2020-11-04T10:09:29+00:00",
+      "doneChargingTime": "2020-11-04T02:37:33+00:00",
+      "kWhDelivered": 7.91,
+      "timezone": "America/Los_Angeles",
+      "userID": null,
+      "userInputs": [
+        {
+          "kWhRequested": 9.49,
+          "minutesAvailable": 539,
+          "requestedDeparture": "2020-11-04T10:09:29+00:00",
+          "WhPerMile": 300
+        }
+      ]
+    }
+  ]
+}

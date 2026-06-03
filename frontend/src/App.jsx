@@ -16,6 +16,9 @@ const AnalyticsPage = lazy(() => import("./pages/AnalyticsPage"));
 const AiDecisionsPage = lazy(() => import("./pages/AiDecisionsPage"));
 const SettingsPage = lazy(() => import("./pages/SettingsPage"));
 const ReportCenter = lazy(() => import("./pages/ReportCenter"));
+const SmartGridMapPage = lazy(() => import("./pages/SmartGridMapPage"));
+const DigitalTwin3DPage = lazy(() => import("./pages/DigitalTwin3DPage"));
+const ForecastSustainabilityPage = lazy(() => import("./pages/ForecastSustainabilityPage"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 
 function RouteFallback() {
@@ -97,6 +100,30 @@ function App() {
               element={
                 <Suspense fallback={<RouteFallback />}>
                   <AnalyticsPage />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/smart-grid-map"
+              element={
+                <Suspense fallback={<RouteFallback />}>
+                  <SmartGridMapPage />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/digital-twin-3d"
+              element={
+                <Suspense fallback={<RouteFallback />}>
+                  <DigitalTwin3DPage />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/forecast-sustainability"
+              element={
+                <Suspense fallback={<RouteFallback />}>
+                  <ForecastSustainabilityPage />
                 </Suspense>
               }
             />

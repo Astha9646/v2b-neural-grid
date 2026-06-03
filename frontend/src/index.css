@@ -79,4 +79,40 @@
   .glow-dot-amber {
     box-shadow: 0 0 6px rgba(251, 191, 36, 0.45);
   }
+
+  .glass-viz {
+    @apply backdrop-blur-md bg-white/[0.03] border border-white/[0.08];
+  }
+
+  .viz-page {
+    @apply transition-opacity duration-300 ease-out;
+  }
+
+  .grid-map-canvas {
+    @apply rounded-2xl;
+  }
+
+  .grid-map-marker {
+    background: transparent !important;
+    border: none !important;
+  }
+
+  .leaflet-popup-content-wrapper {
+    @apply rounded-xl border border-cyan-500/20 bg-[#0a1220]/95 text-slate-100 shadow-lg;
+  }
+
+  .leaflet-popup-tip {
+    background: #0a1220;
+  }
+
+  @keyframes neon-flow-dash {
+    to {
+      stroke-dashoffset: -28;
+    }
+  }
+
+  .neon-flow-line {
+    animation: neon-flow-dash 1.2s linear infinite;
+    filter: drop-shadow(0 0 4px rgba(34, 211, 238, 0.55));
+  }
 }

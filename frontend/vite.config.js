@@ -21,6 +21,8 @@ export default defineConfig(({ mode }) => {
         output: {
           manualChunks(id) {
             if (id.includes("node_modules")) {
+              if (id.includes("three") || id.includes("@react-three")) return "three-viz";
+              if (id.includes("leaflet")) return "map-viz";
               if (id.includes("recharts") || id.includes("d3-")) return "charts";
               if (id.includes("react-router")) return "vendor";
               if (id.includes("react-dom") || id.includes("react/")) return "vendor";

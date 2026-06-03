@@ -43,7 +43,7 @@ const GlobalStreamStatus = memo(function GlobalStreamStatus() {
 
 function DashboardPage() {
   return (
-    <div className="min-w-0 space-y-12">
+    <div className="min-w-0 space-y-12 viz-page">
       <section aria-labelledby="section-global">
         <SectionHeader
           eyebrow="Operations overview"

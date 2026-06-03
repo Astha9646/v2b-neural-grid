@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
-const NAV_ITEMS = [
+const NAV_PRIMARY = [
   {
     id: "dashboard",
     label: "Dashboard",
@@ -10,17 +10,28 @@ const NAV_ITEMS = [
     icon: DashboardIcon,
     end: true,
   },
-  { id: "fleet", label: "Fleet", to: "/fleet", icon: FleetIcon },
-  { id: "charging", label: "Charging", to: "/charging", icon: ChargingIcon },
-  { id: "energy", label: "Energy", to: "/energy", icon: EnergyIcon },
-  { id: "analytics", label: "Analytics", to: "/analytics", icon: AnalyticsIcon },
+  { id: "smart-grid-map", label: "Smart Grid Map", to: "/smart-grid-map", icon: MapIcon },
+  { id: "digital-twin-3d", label: "3D Digital Twin", to: "/digital-twin-3d", icon: Twin3DIcon },
   {
     id: "ai-decisions",
-    label: "AI Decisions",
+    label: "AI Control Center",
     to: "/ai-decisions",
     icon: AIIcon,
     badge: "RL",
   },
+  {
+    id: "forecast",
+    label: "Forecast & Sustainability",
+    to: "/forecast-sustainability",
+    icon: ForecastIcon,
+  },
+];
+
+const NAV_SECONDARY = [
+  { id: "fleet", label: "Fleet", to: "/fleet", icon: FleetIcon },
+  { id: "charging", label: "Charging", to: "/charging", icon: ChargingIcon },
+  { id: "energy", label: "Energy", to: "/energy", icon: EnergyIcon },
+  { id: "analytics", label: "Analytics", to: "/analytics", icon: AnalyticsIcon },
   { id: "reports", label: "Reports", to: "/reports", icon: ReportsIcon },
   { id: "settings", label: "Settings", to: "/settings", icon: SettingsIcon },
 ];
@@ -120,6 +131,48 @@ function AIIcon({ className }) {
       <circle cx="9" cy="10" r="1" fill="currentColor" />
       <circle cx="15" cy="10" r="1" fill="currentColor" />
       <path d="M9 14h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function MapIcon({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path
+        d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2V6z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+      <path d="M9 4v14M15 6v14" stroke="currentColor" strokeWidth="1.5" />
+    </svg>
+  );
+}
+
+function Twin3DIcon({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path
+        d="M12 2L4 7v10l8 5 8-5V7l-8-5z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+      <path d="M12 12l8-5M12 12v10M12 12L4 7" stroke="currentColor" strokeWidth="1.5" />
+    </svg>
+  );
+}
+
+function ForecastIcon({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path
+        d="M6 18h12a4 4 0 100-8 5 5 0 10-9.5 2.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <path d="M8 15h.01M12 15h.01M16 15h.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
     </svg>
   );
 }
@@ -285,7 +338,15 @@ function SidebarPanel({ onNavigate, className = "" }) {
           Command Center
         </p>
         <ul className="space-y-1">
-          {NAV_ITEMS.map((item) => (
+          {NAV_PRIMARY.map((item) => (
+            <NavItem key={item.id} item={item} onNavigate={onNavigate} />
+          ))}
+        </ul>
+        <p className="mb-2 mt-5 px-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-500">
+          Operations
+        </p>
+        <ul className="space-y-1">
+          {NAV_SECONDARY.map((item) => (
             <NavItem key={item.id} item={item} onNavigate={onNavigate} />
           ))}
         </ul>

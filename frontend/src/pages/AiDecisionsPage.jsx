@@ -7,7 +7,7 @@ export default function AiDecisionsPage() {
     <div className="min-w-0 space-y-8">
       <header className="min-w-0">
         <p className="section-eyebrow">AI</p>
-        <h1 className="font-display text-2xl font-bold text-white">AI Decisions</h1>
+        <h1 className="font-display text-2xl font-bold text-white">AI Control Center</h1>
         <p className="section-subheading">Explainable DDPG policy · XAI reasoning · optimization masks</p>
       </header>
       <DecisionPanel />

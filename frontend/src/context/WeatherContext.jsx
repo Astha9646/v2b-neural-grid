@@ -7,10 +7,11 @@ import {
   useState,
 } from "react";
 
-import { GRID_MAP_CENTER } from "../data/gridGeoAssets";
+import { useCityPreset } from "./CityPresetContext";
 import {
   fetchWeather,
   weatherEffect3D,
+  weatherMapEffects,
   weatherRenewableFactor,
 } from "../services/weatherService";
 import { useTwinSlice } from "../hooks/useTelemetrySelectors";
@@ -21,6 +22,7 @@ const logger = createEnvLogger("WeatherContext");
 const WeatherContext = createContext(null);
 
 export function WeatherProvider({ children }) {
+  const { center } = useCityPreset();
   const { latest } = useTwinSlice();
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -28,14 +30,14 @@ export function WeatherProvider({ children }) {
   const refresh = useCallback(async () => {
     setLoading(true);
     try {
-      const data = await fetchWeather(GRID_MAP_CENTER.lat, GRID_MAP_CENTER.lng);
+      const data = await fetchWeather(center.lat, center.lng);
       setWeather(data);
     } catch (err) {
       logger.warn("refresh failed", err?.message);
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [center.lat, center.lng]);
 
   useEffect(() => {
     refresh();
@@ -49,6 +51,7 @@ export function WeatherProvider({ children }) {
   }, [weather, latest?.renewable_ratio]);
 
   const effects3d = useMemo(() => weatherEffect3D(weather), [weather]);
+  const mapEffects = useMemo(() => weatherMapEffects(weather), [weather]);
 
   const value = useMemo(
     () => ({
@@ -57,8 +60,9 @@ export function WeatherProvider({ children }) {
       refresh,
       renewableBlend,
       effects3d,
+      mapEffects,
     }),
-    [weather, loading, refresh, renewableBlend, effects3d],
+    [weather, loading, refresh, renewableBlend, effects3d, mapEffects],
   );
 
   return <WeatherContext.Provider value={value}>{children}</WeatherContext.Provider>;

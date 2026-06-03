@@ -5,7 +5,8 @@
 import { useMemo, useRef, useState, useEffect } from "react";
 
 import { useTwinSlice, useTelemetryOps } from "../hooks/useTelemetrySelectors";
-import { GRID_GEO_ASSETS } from "../data/gridGeoAssets";
+import { useCityPreset } from "../context/CityPresetContext";
+import { useStoryMode } from "../context/StoryModeContext";
 
 const SYNC_MS = 2000;
 
@@ -24,21 +25,29 @@ function statusFromStress(stress, anomaly) {
   return "ok";
 }
 
-/**
- * Derive per-asset live status from global telemetry + fleet ops.
- */
-function buildAssetStates(latest, fleet, inference, alerts) {
-  const stress = clamp(num(latest?.grid_stress_index), 0, 1);
-  const renewable = clamp(num(latest?.renewable_ratio), 0, 1);
+function buildAssetStates(geoAssets, latest, fleet, inference, storyStress, storyFlags) {
+  let stress = clamp(num(latest?.grid_stress_index), 0, 1);
+  if (storyStress != null) stress = storyStress;
+
+  const renewable = clamp(
+    num(latest?.renewable_ratio) + (storyFlags?.renewableBoost ? 0.12 : 0),
+    0,
+    1,
+  );
   const solarKw = num(latest?.solar_generation_kw);
   const loadKw = num(latest?.grid_load_kw);
   const soc = clamp(num(latest?.soc_percent), 0, 100);
   const chargingKw = num(latest?.charging_power_kw);
+  const thermal = clamp(num(latest?.thermal_index), 0, 1);
+  const batteryHealth = clamp(1 - num(latest?.degradation_score) / 100, 0, 1);
+  const predictedLoad = num(latest?.peak_demand_kw, loadKw);
   const globalStatus = statusFromStress(stress, num(latest?.anomaly_score));
 
   const fleetById = Object.fromEntries((fleet || []).map((f) => [f.id, f]));
+  const evScale = storyFlags?.evThrottled ? 0.55 : 1;
+  const batScale = storyFlags?.batteryActive ? 1.35 : 1;
 
-  return GRID_GEO_ASSETS.map((asset) => {
+  return geoAssets.map((asset) => {
     let kw = 0;
     let status = globalStatus;
     let socLocal = null;
@@ -52,13 +61,13 @@ function buildAssetStates(latest, fleet, inference, alerts) {
         kw = loadKw * 0.45;
         break;
       case "battery":
-        kw = chargingKw < 0 ? Math.abs(chargingKw) * 0.4 : chargingKw * 0.25;
+        kw = (chargingKw < 0 ? Math.abs(chargingKw) * 0.4 : chargingKw * 0.25) * batScale;
         socLocal = soc;
         status = soc < 20 ? "warning" : status;
         break;
       case "ev_charger": {
         const fleetRow = asset.fleetId ? fleetById[asset.fleetId] : null;
-        kw = num(fleetRow?.charging_kw, chargingKw / 4);
+        kw = num(fleetRow?.charging_kw, chargingKw / 4) * evScale;
         socLocal = num(fleetRow?.soc, soc);
         status = fleetRow?.status === "charging" ? "ok" : fleetRow?.status === "fault" ? "critical" : status;
         break;
@@ -77,31 +86,34 @@ function buildAssetStates(latest, fleet, inference, alerts) {
       soc: socLocal,
       stress,
       renewable,
+      thermal,
+      batteryHealth,
+      predictedLoad,
       status,
-      optimization: inference?.optimization_action ?? "—",
+      optimization: inference?.optimization_action ?? "Monitoring grid equilibrium",
     };
   });
 }
 
-function buildHeatZones(latest) {
-  const stress = clamp(num(latest?.grid_stress_index), 0, 1);
-  const center = { lat: 34.1377, lng: -118.1253 };
-  return [
-    { id: "heat-core", lat: center.lat, lng: center.lng, radiusM: 800 + stress * 400, intensity: stress },
-    { id: "heat-east", lat: 34.139, lng: -118.12, radiusM: 500 + stress * 200, intensity: stress * 0.85 },
-    { id: "heat-west", lat: 34.136, lng: -118.13, radiusM: 450, intensity: stress * 0.6 },
-  ];
+function buildHeatPointsFromAssets(assets, stress, center) {
+  const base = stress * 0.55;
+  return assets
+    .filter((a) => ["substation", "utility", "building", "ev_charger"].includes(a.type))
+    .map((a) => {
+      const local = a.status === "critical" ? 1 : a.status === "warning" ? 0.7 : 0.35;
+      const renBoost = a.type === "solar" ? 0.2 : 0;
+      return [a.lat, a.lng, base + local * 0.35 + renBoost];
+    });
 }
 
-/**
- * Shared sync hook for map + 3D twin (throttled to protect FPS).
- */
 export function useGridSyncState() {
+  const { assets: geoAssets, center } = useCityPreset();
   const { latest } = useTwinSlice();
   const { fleet, inference, alerts } = useTelemetryOps();
+  const { storyStress, storyFlags } = useStoryMode();
+
   const [synced, setSynced] = useState(() => ({
-    assets: buildAssetStates(null, [], null, []),
-    heatZones: buildHeatZones(null),
+    assets: buildAssetStates(geoAssets, null, [], null, null, null),
     latest: null,
     updatedAt: 0,
   }));
@@ -112,8 +124,7 @@ export function useGridSyncState() {
     timerRef.current = setTimeout(() => {
       timerRef.current = null;
       setSynced({
-        assets: buildAssetStates(latest, fleet, inference, alerts),
-        heatZones: buildHeatZones(latest),
+        assets: buildAssetStates(geoAssets, latest, fleet, inference, storyStress, storyFlags),
         latest,
         updatedAt: Date.now(),
       });
@@ -124,15 +135,19 @@ export function useGridSyncState() {
         timerRef.current = null;
       }
     };
-  }, [latest, fleet, inference, alerts]);
+  }, [geoAssets, latest, fleet, inference, storyStress, storyFlags]);
+
+  const stress = synced.assets[0]?.stress ?? num(latest?.grid_stress_index);
 
   return useMemo(
     () => ({
       ...synced,
+      stress,
+      heatPoints: buildHeatPointsFromAssets(synced.assets, stress, center),
       fleet,
       inference,
       alerts,
     }),
-    [synced, fleet, inference, alerts],
+    [synced, stress, center, fleet, inference, alerts],
   );
 }

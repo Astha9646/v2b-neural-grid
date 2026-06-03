@@ -115,4 +115,115 @@
     animation: neon-flow-dash 1.2s linear infinite;
     filter: drop-shadow(0 0 4px rgba(34, 211, 238, 0.55));
   }
+
+  .map-os-shell {
+    @apply bg-[#030712];
+  }
+
+  .map-marker-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: transform 0.25s ease;
+  }
+
+  .map-marker-wrap:hover {
+    transform: scale(1.12);
+  }
+
+  .map-live-dot {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #34d399;
+    box-shadow: 0 0 8px #34d399;
+    animation: pulse 2s infinite;
+  }
+
+  .map-live-dot-inline::before {
+    content: "● ";
+    color: #34d399;
+    animation: pulse 2s infinite;
+  }
+
+  .map-status-ring {
+    position: absolute;
+    inset: -2px;
+    border-radius: 50%;
+    border: 1px solid;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .map-marker-pulse .map-marker-wrap,
+  .map-marker-pulse .map-alert-wrap {
+    animation: map-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes map-pulse {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.25); }
+  }
+
+  .map-rain-overlay {
+    background-image: linear-gradient(
+      transparent 0%,
+      rgba(147, 197, 253, 0.08) 50%,
+      transparent 100%
+    );
+    background-size: 2px 24px;
+    animation: map-rain 0.4s linear infinite;
+  }
+
+  @keyframes map-rain {
+    to { background-position: 0 24px; }
+  }
+
+  .flow-particle {
+    filter: drop-shadow(0 0 6px rgba(34, 211, 238, 0.8));
+  }
+
+  .twin-label {
+    animation: twin-label-in 0.2s ease-out;
+  }
+
+  @keyframes twin-label-in {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .twin-hud {
+    pointer-events: none;
+  }
+
+  .landing-grid-bg {
+    background-image:
+      linear-gradient(rgba(34, 211, 238, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 211, 238, 0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+    animation: landing-grid-drift 24s linear infinite;
+  }
+
+  @keyframes landing-grid-drift {
+    to {
+      background-position: 48px 48px;
+    }
+  }
+
+  .landing-feature {
+    @apply transition-transform duration-300;
+  }
+
+  .landing-feature:hover {
+    transform: translateY(-2px);
+  }
+
+  .executive-hud {
+    backdrop-filter: blur(12px);
+  }
 }

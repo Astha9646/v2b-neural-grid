@@ -21,9 +21,8 @@ const DEMO_WEATHER = Object.freeze({
 });
 
 const CACHE_MS = 10 * 60 * 1000;
-let cache = null;
-let cacheAt = 0;
-let inflight = null;
+const cacheByKey = new Map();
+const inflightByKey = new Map();
 
 function readApiKey() {
   return import.meta.env.VITE_OPENWEATHER_API_KEY?.trim() || "";
@@ -44,19 +43,21 @@ function clamp(v, lo, hi) {
   return Math.min(hi, Math.max(lo, v));
 }
 
-export async function fetchWeather(lat = 34.1377, lon = -118.1253) {
+export async function fetchWeather(lat = 12.9716, lon = 77.5946) {
+  const key = `${lat.toFixed(3)},${lon.toFixed(3)}`;
   const now = Date.now();
-  if (cache && now - cacheAt < CACHE_MS) return cache;
-  if (inflight) return inflight;
+  const cached = cacheByKey.get(key);
+  if (cached && now - cached.at < CACHE_MS) return cached.data;
+  if (inflightByKey.has(key)) return inflightByKey.get(key);
 
   const apiKey = readApiKey();
   if (!apiKey) {
-    cache = { ...DEMO_WEATHER, isDemo: true };
-    cacheAt = now;
-    return cache;
+    const demo = { ...DEMO_WEATHER, isDemo: true };
+    cacheByKey.set(key, { data: demo, at: now });
+    return demo;
   }
 
-  inflight = axios
+  const promise = axios
     .get("https://api.openweathermap.org/data/2.5/weather", {
       params: { lat, lon, appid: apiKey, units: "metric" },
       timeout: 12_000,
@@ -74,8 +75,7 @@ export async function fetchWeather(lat = 34.1377, lon = -118.1253) {
         isDemo: false,
       };
       payload.solarIrradiance = estimateSolarIrradiance(payload);
-      cache = payload;
-      cacheAt = Date.now();
+      cacheByKey.set(key, { data: payload, at: Date.now() });
       return payload;
     })
     .catch((err) => {
@@ -83,10 +83,11 @@ export async function fetchWeather(lat = 34.1377, lon = -118.1253) {
       return { ...DEMO_WEATHER, isDemo: true, error: err?.message };
     })
     .finally(() => {
-      inflight = null;
+      inflightByKey.delete(key);
     });
 
-  return inflight;
+  inflightByKey.set(key, promise);
+  return promise;
 }
 
 /** Weather-adjusted renewable factor for viz + AI hints. */
@@ -97,10 +98,29 @@ export function weatherRenewableFactor(weather, telemetryRenewable = 0) {
 
 export function weatherEffect3D(weather) {
   const cond = String(weather?.condition ?? "").toLowerCase();
+  const temp = weather?.tempC ?? 24;
+  const heat = temp > 32;
   return {
     sunIntensity: weather?.solarIrradiance ?? 0.5,
     cloudCover: (weather?.clouds ?? 30) / 100,
     rain: cond.includes("rain") || cond.includes("drizzle"),
+    fog: cond.includes("mist") || cond.includes("fog"),
     night: weather?.icon?.endsWith("n") ?? false,
+    heat,
+    wetRoads: cond.includes("rain"),
+  };
+}
+
+/** Map overlay intensities from live weather */
+export function weatherMapEffects(weather) {
+  const cond = String(weather?.condition ?? "").toLowerCase();
+  const temp = weather?.tempC ?? 24;
+  return {
+    cloudDim: (weather?.clouds ?? 25) / 100,
+    solarGlow: weather?.solarIrradiance ?? 0.5,
+    rain: cond.includes("rain") || cond.includes("drizzle"),
+    fog: cond.includes("mist") || cond.includes("fog"),
+    thermalStress: clamp((temp - 28) / 12, 0, 1),
+    solarPenalty: cond.includes("rain") ? 0.35 : cond.includes("cloud") ? 0.65 : 1,
   };
 }

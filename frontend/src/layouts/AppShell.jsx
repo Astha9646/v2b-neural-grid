@@ -8,6 +8,8 @@ import ErrorBoundary from "../components/ErrorBoundary";
 import { useAuth } from "../context/AuthContext";
 import { TelemetryProvider } from "../context/TelemetryContext";
 import { ObservabilityProvider } from "../context/ObservabilityContext";
+import { CityPresetProvider } from "../context/CityPresetContext";
+import { StoryModeProvider } from "../context/StoryModeContext";
 import { WeatherProvider } from "../context/WeatherContext";
 import { VisualizationPrefsProvider } from "../context/VisualizationPrefsContext";
 
@@ -46,32 +48,35 @@ function AppShellInner() {
   return (
     <ErrorBoundary>
       <TelemetryProvider key={sessionKey}>
-        <WeatherProvider>
-          <VisualizationPrefsProvider>
-            <ObservabilityProvider pollMs={12_000}>
-              <div className="flex min-h-screen bg-grid-dark font-sans text-slate-100">
-                <Sidebar />
-                <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
-                  <Navbar title={`Neural Grid · ${title}`} />
-                  <main className="relative flex-1 overflow-y-auto overflow-x-hidden">
-                    <div
-                      className="pointer-events-none absolute inset-0 bg-mesh-gradient opacity-30"
-                      aria-hidden
-                    />
-                    <div
-                      className={[
-                        "relative mx-auto max-w-[1680px]",
-                        fullBleed ? "px-2 py-4 sm:px-4 lg:py-6" : "px-4 py-8 sm:px-6 lg:px-8 lg:py-10",
-                      ].join(" ")}
-                    >
-                      <Outlet />
+        <CityPresetProvider>
+          <StoryModeProvider>
+            <WeatherProvider>
+              <VisualizationPrefsProvider>
+                <ObservabilityProvider pollMs={12_000}>
+                  <div className="flex min-h-screen bg-grid-dark font-sans text-slate-100">
+                    <Sidebar />
+                    <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
+                      <Navbar title={`Neural Grid · ${title}`} />
+                      <main className="relative flex-1 overflow-y-auto overflow-x-hidden">
+                        <div
+                          className="pointer-events-none absolute inset-0 bg-mesh-gradient opacity-30"
+                          aria-hidden
+                        />
+                        <div
+                          className={[
+                            "relative mx-auto max-w-[1680px]",
+                            fullBleed ? "px-2 py-4 sm:px-4 lg:py-6" : "px-4 py-8 sm:px-6 lg:px-8 lg:py-10",
+                          ].join(" ")}
+                        >
+                          <Outlet />
+                        </div>
+                      </main>
                     </div>
-                  </main>
-                </div>
-              </div>
-            </ObservabilityProvider>
-          </VisualizationPrefsProvider>
-        </WeatherProvider>
+                  </div>
+                </ObservabilityProvider>              </VisualizationPrefsProvider>
+            </WeatherProvider>
+          </StoryModeProvider>
+        </CityPresetProvider>
       </TelemetryProvider>
     </ErrorBoundary>
   );

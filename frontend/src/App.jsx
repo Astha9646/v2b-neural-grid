@@ -7,6 +7,7 @@ import { AuthProvider } from "./context/AuthContext";
 import AppShell from "./layouts/AppShell";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import LandingPage from "./pages/LandingPage";
 
 const DashboardPage = lazy(() => import("./pages/DashboardPage"));
 const FleetPage = lazy(() => import("./pages/FleetPage"));
@@ -38,7 +39,7 @@ function App() {
     <BrowserRouter>
       <AuthProvider>
         <Routes>
-          <Route path="/" element={<Navigate to="/login" replace />} />
+          <Route path="/" element={<LandingPage />} />
           <Route
             path="/login"
             element={

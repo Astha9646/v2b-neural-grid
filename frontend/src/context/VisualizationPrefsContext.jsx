@@ -7,6 +7,14 @@ const DEFAULT_PREFS = Object.freeze({
   paused: false,
   autoRotate: true,
   focusNodeId: null,
+  showLabels: true,
+});
+
+const QUALITY_PARTICLES = Object.freeze({
+  low: 4,
+  medium: 12,
+  high: 24,
+  ultra: 40,
 });
 
 export function VisualizationPrefsProvider({ children }) {
@@ -17,7 +25,9 @@ export function VisualizationPrefsProvider({ children }) {
     const mobile = window.matchMedia("(max-width: 767px)").matches;
     const coarse = window.matchMedia("(pointer: coarse)").matches;
     if (mobile || coarse) {
-      setPrefs((p) => (p.quality === "medium" ? { ...p, quality: "low", autoRotate: false } : p));
+      setPrefs((p) =>
+        p.quality === "medium" ? { ...p, quality: "low", autoRotate: false, showLabels: false } : p,
+      );
     }
   }, []);
 
@@ -33,30 +43,45 @@ export function VisualizationPrefsProvider({ children }) {
     setPrefs((p) => ({ ...p, autoRotate: !p.autoRotate }));
   }, []);
 
+  const toggleShowLabels = useCallback(() => {
+    setPrefs((p) => ({ ...p, showLabels: !p.showLabels }));
+  }, []);
+
   const setFocusNodeId = useCallback((focusNodeId) => {
     setPrefs((p) => ({ ...p, focusNodeId }));
   }, []);
 
   const isLowGraphics = prefs.quality === "low";
-  const particleCount = prefs.quality === "high" ? 24 : prefs.quality === "medium" ? 12 : 4;
+  const isUltra = prefs.quality === "ultra";
+  const particleCount = QUALITY_PARTICLES[prefs.quality] ?? QUALITY_PARTICLES.medium;
 
   const value = useMemo(
     () => ({
       ...prefs,
       isLowGraphics,
+      isUltra,
       particleCount,
       setQuality,
       togglePaused,
       toggleAutoRotate,
+      toggleShowLabels,
       setFocusNodeId,
     }),
-    [prefs, isLowGraphics, particleCount, setQuality, togglePaused, toggleAutoRotate, setFocusNodeId],
+    [
+      prefs,
+      isLowGraphics,
+      isUltra,
+      particleCount,
+      setQuality,
+      togglePaused,
+      toggleAutoRotate,
+      toggleShowLabels,
+      setFocusNodeId,
+    ],
   );
 
   return (
-    <VisualizationPrefsContext.Provider value={value}>
-      {children}
-    </VisualizationPrefsContext.Provider>
+    <VisualizationPrefsContext.Provider value={value}>{children}</VisualizationPrefsContext.Provider>
   );
 }
 

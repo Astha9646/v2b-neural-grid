@@ -226,4 +226,83 @@
   .executive-hud {
     backdrop-filter: blur(12px);
   }
+
+  /* Isometric command center */
+  .iso-city-shell {
+    box-shadow: inset 0 0 80px rgba(34, 211, 238, 0.04), 0 0 60px rgba(0, 0, 0, 0.4);
+  }
+
+  .flow-dash {
+    stroke-dasharray: 8 6;
+    animation: neon-flow-dash 1.4s linear infinite;
+    filter: drop-shadow(0 0 4px rgba(34, 211, 238, 0.4));
+  }
+
+  .road-pulse {
+    animation: road-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes road-pulse {
+    0%, 100% { opacity: 0.15; }
+    50% { opacity: 0.35; }
+  }
+
+  .stress-pulse {
+    animation: stress-pulse 1.8s ease-in-out infinite;
+  }
+
+  @keyframes stress-pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.85; }
+  }
+
+  .charge-pulse {
+    animation: charge-pulse 2.2s ease-in-out infinite;
+  }
+
+  @keyframes charge-pulse {
+    0%, 100% { opacity: 0.35; }
+    50% { opacity: 0.75; }
+  }
+
+  .window-blink {
+    animation: window-blink 3s step-end infinite;
+  }
+
+  @keyframes window-blink {
+    0%, 70%, 100% { opacity: 0.3; }
+    75% { opacity: 0.9; }
+  }
+
+  .solar-shimmer rect {
+    animation: solar-shimmer 2.5s ease-in-out infinite;
+  }
+
+  @keyframes solar-shimmer {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 0.95; }
+  }
+
+  .float-particle {
+    animation: float-particle 6s ease-in-out infinite;
+  }
+
+  @keyframes float-particle {
+    0%, 100% { transform: translateY(0); opacity: 0.2; }
+    50% { transform: translateY(-8px); opacity: 0.6; }
+  }
+
+  .iso-rain {
+    background-image: linear-gradient(transparent, rgba(147, 197, 253, 0.1) 50%, transparent);
+    background-size: 2px 20px;
+    animation: map-rain 0.35s linear infinite;
+  }
+
+  .command-center .intelligence-panel {
+    backdrop-filter: blur(16px);
+  }
+
+  .bottom-analytics {
+    backdrop-filter: blur(12px);
+  }
 }

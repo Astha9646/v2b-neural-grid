@@ -3,35 +3,19 @@ import { NavLink, useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 const NAV_PRIMARY = [
-  {
-    id: "dashboard",
-    label: "Dashboard",
-    to: "/dashboard",
-    icon: DashboardIcon,
-    end: true,
-  },
-  { id: "smart-grid-map", label: "Smart Grid Map", to: "/smart-grid-map", icon: MapIcon },
-  { id: "digital-twin-3d", label: "3D Digital Twin", to: "/digital-twin-3d", icon: Twin3DIcon },
-  {
-    id: "ai-decisions",
-    label: "AI Control Center",
-    to: "/ai-decisions",
-    icon: AIIcon,
-    badge: "RL",
-  },
-  {
-    id: "forecast",
-    label: "Forecast & Sustainability",
-    to: "/forecast-sustainability",
-    icon: ForecastIcon,
-  },
+  { id: "dashboard", label: "Dashboard", to: "/dashboard", icon: DashboardIcon, end: true },
+  { id: "smart-grid-map", label: "Smart Grid", to: "/smart-grid-map", icon: MapIcon },
+  { id: "ai-decisions", label: "AI Optimization", to: "/ai-decisions", icon: AIIcon, badge: "RL" },
+  { id: "forecast", label: "Forecasting", to: "/forecast-sustainability", icon: ForecastIcon },
+  { id: "fleet", label: "EV Fleet", to: "/fleet", icon: FleetIcon },
+  { id: "sustainability", label: "Sustainability", to: "/forecast-sustainability", icon: EnergyIcon },
 ];
 
 const NAV_SECONDARY = [
-  { id: "fleet", label: "Fleet", to: "/fleet", icon: FleetIcon },
+  { id: "analytics", label: "Deep Analytics", to: "/analytics", icon: AnalyticsIcon },
+  { id: "alerts", label: "Alerts", to: "/analytics#alerts", icon: AlertsIcon },
   { id: "charging", label: "Charging", to: "/charging", icon: ChargingIcon },
   { id: "energy", label: "Energy", to: "/energy", icon: EnergyIcon },
-  { id: "analytics", label: "Analytics", to: "/analytics", icon: AnalyticsIcon },
   { id: "reports", label: "Reports", to: "/reports", icon: ReportsIcon },
   { id: "settings", label: "Settings", to: "/settings", icon: SettingsIcon },
 ];
@@ -145,6 +129,15 @@ function MapIcon({ className }) {
         strokeLinejoin="round"
       />
       <path d="M9 4v14M15 6v14" stroke="currentColor" strokeWidth="1.5" />
+    </svg>
+  );
+}
+
+function AlertsIcon({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path d="M12 9v4M12 17h.01" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
     </svg>
   );
 }

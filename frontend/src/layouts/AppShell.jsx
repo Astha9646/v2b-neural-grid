@@ -15,8 +15,8 @@ import { VisualizationPrefsProvider } from "../context/VisualizationPrefsContext
 
 const ROUTE_TITLES = {
   "/dashboard": "Command Center",
-  "/smart-grid-map": "Smart Grid Map",
-  "/digital-twin-3d": "3D Digital Twin",
+  "/smart-grid-map": "Smart Grid",
+  "/digital-twin-3d": "Command Center",
   "/ai-decisions": "AI Control Center",
   "/forecast-sustainability": "Forecast & Sustainability",
   "/fleet": "Fleet Operations",
@@ -27,7 +27,7 @@ const ROUTE_TITLES = {
   "/settings": "System Settings",
 };
 
-const FULL_BLEED_ROUTES = new Set(["/smart-grid-map", "/digital-twin-3d"]);
+const FULL_BLEED_ROUTES = new Set(["/dashboard", "/smart-grid-map"]);
 
 function AppShellInner() {
   const location = useLocation();

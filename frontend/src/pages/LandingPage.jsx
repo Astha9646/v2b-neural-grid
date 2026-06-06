@@ -9,7 +9,7 @@ const FEATURES = [
   { title: "Smart Grid Intelligence", desc: "Geospatial command layer with live stress heatmaps and energy routing." },
   { title: "Renewable Forecasting", desc: "Weather-blended solar irradiance and renewable mix prediction." },
   { title: "EV Fleet Management", desc: "Fleet SOC, charging sessions, and V2G bidirectional flows." },
-  { title: "Digital Twin Visualization", desc: "Cinematic 3D smart city with story-mode AI simulation." },
+  { title: "Digital Twin Visualization", desc: "2.5D isometric command center with live energy routing and AI story mode." },
 ];
 
 function AnimatedCounter({ target, suffix = "" }) {
